@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Jimmy先森</title>
   <icon>https://jimmyh.site/icon.png</icon>
-  <subtitle>Coding for life</subtitle>
+  <subtitle>thinking</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jimmyh.site/"/>
@@ -10,7 +10,7 @@
   <id>https://jimmyh.site/</id>
   
   <author>
-    <name>Jimmy</name>
+    <name>Jimmy Huang</name>
     
   </author>
   
