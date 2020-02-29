@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jimmyh.site/"/>
-  <updated>2020-02-28T21:50:34.689Z</updated>
+  <updated>2020-02-29T18:15:04.238Z</updated>
   <id>https://jimmyh.site/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo-增加个性化运行时间和粒子时钟</title>
+    <link href="https://jimmyh.site/archives/b3667c2d.html"/>
+    <id>https://jimmyh.site/archives/b3667c2d.html</id>
+    <published>2020-02-29T17:28:27.000Z</published>
+    <updated>2020-02-29T18:15:04.238Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;个性化网站运行时间&quot;&gt;&lt;a href=&quot;#个性化网站运行时间&quot; class=&quot;headerlink&quot; title=&quot;个性化网站运行时间&quot;&gt;&lt;/a&gt;个性化网站运行时间&lt;/h2&gt;&lt;p&gt;参考&lt;a href=&quot;http://yearito.cn/posts/hexo-advanced-settings.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;站点运行时间统计&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;基于&lt;strong&gt;hexo 4.2.0&lt;/strong&gt;和&lt;strong&gt;next主题 7.7.1&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://jimmyh.site/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="博客" scheme="https://jimmyh.site/categories/%E6%8A%80%E6%9C%AF/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="hexo搭建" scheme="https://jimmyh.site/tags/hexo%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
