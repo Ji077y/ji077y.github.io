@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jimmyh.site/"/>
-  <updated>2020-03-01T13:27:29.237Z</updated>
+  <updated>2020-03-01T16:25:35.053Z</updated>
   <id>https://jimmyh.site/</id>
   
   <author>
@@ -21,23 +21,11 @@
     <link href="https://jimmyh.site/archives/c0b08501.html"/>
     <id>https://jimmyh.site/archives/c0b08501.html</id>
     <published>2020-03-01T10:01:27.000Z</published>
-    <updated>2020-03-01T13:27:29.237Z</updated>
+    <updated>2020-03-01T16:25:35.053Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;客户拜访第6阶段及开场接触&quot;&gt;&lt;a href=&quot;#客户拜访第6阶段及开场接触&quot; class=&quot;headerlink&quot; title=&quot;客户拜访第6阶段及开场接触&quot;&gt;&lt;/a&gt;客户拜访第6阶段及开场接触&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;T：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Territory&lt;strong&gt;客户领域&lt;/strong&gt;&lt;ul&gt;
-&lt;li&gt;某个业务部门&lt;/li&gt;
-&lt;li&gt;地区机构&lt;/li&gt;
-&lt;li&gt;新业务上线&lt;/li&gt;
-&lt;li&gt;大裁员&lt;/li&gt;
-&lt;li&gt;进军某个崭新的领域&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
+      这篇文章被几米大大加密了，属于内部文档哦，需要的请联系jimmy获取密码
     
     </summary>
     
@@ -179,11 +167,11 @@
   </entry>
   
   <entry>
-    <title>Github+hexo搭建个人博客踩坑记录</title>
+    <title>hexo next主题添加个性化设置</title>
     <link href="https://jimmyh.site/archives/de3600d4.html"/>
     <id>https://jimmyh.site/archives/de3600d4.html</id>
     <published>2020-02-09T15:59:18.000Z</published>
-    <updated>2020-03-01T13:37:22.168Z</updated>
+    <updated>2020-03-01T17:17:45.951Z</updated>
     
     <summary type="html">
     
@@ -201,9 +189,7 @@
     
       <category term="Git" scheme="https://jimmyh.site/tags/Git/"/>
     
-      <category term="Hexo" scheme="https://jimmyh.site/tags/Hexo/"/>
-    
-      <category term="Error" scheme="https://jimmyh.site/tags/Error/"/>
+      <category term="next个性化设置" scheme="https://jimmyh.site/tags/next%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE/"/>
     
   </entry>
   

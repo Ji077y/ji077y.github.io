@@ -21,25 +21,27 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"jimmyh.site","root":"/","scheme":"Pisces","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"jimmyh.site","root":"/","scheme":"Gemini","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="其中有几个我折腾了很久的问题，CSS小白可能也是这样过来的。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Github+hexo搭建个人博客踩坑记录">
+<meta property="og:title" content="hexo next主题添加个性化设置">
 <meta property="og:url" content="https://jimmyh.site/archives/de3600d4.html">
 <meta property="og:site_name" content="Jimmy先森">
 <meta property="og:description" content="其中有几个我折腾了很久的问题，CSS小白可能也是这样过来的。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://q54tnf1e7.bkt.clouddn.com/077_1.jpg">
-<meta property="og:image" content="http://q54tnf1e7.bkt.clouddn.com/20200212031151.png">
+<meta property="og:image" content="http://q54tnf1e7.bkt.clouddn.com/20200301231232.png?imageView2/0/interlace/1/q/88%7Cwatermark/2/text/QOWHoOexs-Wkp-Wkpw==/font/5qW35L2T/fontsize/560/fill/IzNEM0Q0Ng==/dissolve/66/gravity/SouthEast/dx/10/dy/10%7Cimageslim">
 <meta property="og:image" content="http://q54tnf1e7.bkt.clouddn.com/077%E7%90%83%E5%9C%BA.jpg?imageView2/0/interlace/1/q/88%7Cwatermark/2/text/QOWHoOexs-Wkp-Wkpw==/font/5qW35L2T/fontsize/560/fill/IzNEM0Q0Ng==/dissolve/66/gravity/SouthEast/dx/10/dy/10%7Cimageslim">
+<meta property="og:image" content="http://q54tnf1e7.bkt.clouddn.com/20200301235912.png?imageView2/0/interlace/1/q/88%7Cwatermark/2/text/QOWHoOexs-Wkp-Wkpw==/font/5qW35L2T/fontsize/560/fill/IzNEM0Q0Ng==/dissolve/66/gravity/SouthEast/dx/10/dy/10%7Cimageslim">
+<meta property="og:image" content="http://q54tnf1e7.bkt.clouddn.com/20200302000036.png?imageView2/0/interlace/1/q/88%7Cwatermark/2/text/QOWHoOexs-Wkp-Wkpw==/font/5qW35L2T/fontsize/560/fill/IzNEM0Q0Ng==/dissolve/66/gravity/SouthEast/dx/10/dy/10%7Cimageslim">
+<meta property="og:image" content="http://q54tnf1e7.bkt.clouddn.com/20200302000136.png?imageView2/0/interlace/1/q/88%7Cwatermark/2/text/QOWHoOexs-Wkp-Wkpw==/font/5qW35L2T/fontsize/560/fill/IzNEM0Q0Ng==/dissolve/66/gravity/SouthEast/dx/10/dy/10%7Cimageslim">
 <meta property="article:published_time" content="2020-02-09T15:59:18.000Z">
-<meta property="article:modified_time" content="2020-03-01T13:37:22.168Z">
+<meta property="article:modified_time" content="2020-03-01T17:17:45.951Z">
 <meta property="article:author" content="Jimmy Huang">
 <meta property="article:tag" content="Git">
-<meta property="article:tag" content="Hexo">
-<meta property="article:tag" content="Error">
+<meta property="article:tag" content="next个性化设置">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://q54tnf1e7.bkt.clouddn.com/077_1.jpg">
 
@@ -55,7 +57,7 @@
   };
 </script>
 
-  <title>Github+hexo搭建个人博客踩坑记录 | Jimmy先森</title>
+  <title>hexo next主题添加个性化设置 | Jimmy先森</title>
   
 
 
@@ -138,7 +140,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">17</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">16</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -149,6 +151,11 @@
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>时间线<span class="badge">14</span></a>
+
+  </li>
+        <li class="menu-item menu-item-love">
+
+    <a href="/love/" rel="section"><i class="fa fa-fw fa-heart"></i>亲爱的</a>
 
   </li>
         <li class="menu-item menu-item-sitemap">
@@ -163,7 +170,7 @@
   </li>
         <li class="menu-item menu-item-commonweal">
 
-    <a href="/404/" rel="section"><i class="fa fa-fw fa-heart"></i>公益 404</a>
+    <a href="/404/" rel="section"><i class="fa fa-fw fa-heartbeat"></i>公益 404</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -231,7 +238,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Github+hexo搭建个人博客踩坑记录
+          hexo next主题添加个性化设置
         </h1>
 
         <div class="post-meta">
@@ -263,14 +270,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.2k</span>
+              <span>9.8k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
+              <span>9 分钟</span>
             </span>
 
         </div>
@@ -290,38 +297,68 @@
 <blockquote>
 <p><strong>UV</strong>：全称为Unique Visitor，指的是独立访客数<br><strong>PV</strong>：全称为Page View，指的是网站浏览量<br><strong>UV和PV的区别在于</strong>：一个访客打开了我的博客网站，看了N篇博文，busuanzi会记录N次PV（浏览量），但仅会记录<strong>1</strong>次UV（访客数）</p>
 </blockquote>
-<p>今天找到了<a href="http://yearito.cn/posts/hexo-advanced-settings.html" target="_blank" rel="noopener">Yearito的博客</a>作为参考,使用了<em>高阶用法</em>，终于成功了。</p>
+<p>结合<a href="http://yearito.cn/posts/hexo-advanced-settings.html" target="_blank" rel="noopener">Yearito的博客</a>作为参考,使用了<em>高阶用法</em>，终于成功了。</p>
 <blockquote>
-<p>对busuanzi的代码进行<strong>修改</strong>如下</p>
+<p>在footer.swig中的末尾进行<strong>添加</strong>如下代码</p>
 </blockquote>
-<figure class="highlight html"><figcaption><span>文件路径\themes\next\layout\_third-party\analytics\busuanzi-counter.swig      </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">  &#123;% if theme.busuanzi_count.total_visitors %&#125;</span><br><span class="line">-   <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"site-uv"</span> <span class="attr">title</span>=<span class="string">"&#123;&#123; __('footer.total_visitors') &#125;&#125;"</span>&gt;</span></span><br><span class="line">+   <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"site-uv"</span>&gt;</span></span><br><span class="line">+     &#123;&#123; __('footer.total_visitors', '<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"busuanzi-value"</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_uv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>') &#125;&#125;</span><br><span class="line">-     <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-&#123;&#123; theme.busuanzi_count.total_visitors_icon &#125;&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">-     <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"busuanzi-value"</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_uv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line"></span><br><span class="line">  &#123;% if theme.busuanzi_count.total_views %&#125;</span><br><span class="line">-   <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"site-pv"</span> <span class="attr">title</span>=<span class="string">"&#123;&#123; __('footer.total_views') &#125;&#125;"</span>&gt;</span></span><br><span class="line">+   <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"site-pv"</span>&gt;</span></span><br><span class="line">+     &#123;&#123; __('footer.total_views', '<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"busuanzi-value"</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_pv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>') &#125;&#125;</span><br><span class="line">-     <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-&#123;&#123; theme.busuanzi_count.total_views_icon &#125;&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">-     <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"busuanzi-value"</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_pv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  &#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><figcaption><span>文件路径\themes\next\layout\_partials\footer.swig</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if theme.busuanzi_count.total_visitors %&#125;</span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"site-uv"</span>&gt;</span></span><br><span class="line">    &#123;&#123; __('footer.total_visitors', '<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"busuanzi-value"</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_uv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>') &#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% if theme.busuanzi_count.total_views %&#125;</span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"site-pv"</span>&gt;</span></span><br><span class="line">    &#123;&#123; __('footer.total_views', '<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"busuanzi-value"</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_pv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>') &#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
 
-<p>在自定义样式文件中添加如下样式：（下面会讲如何创建自定义样式文件）</p>
-<figure class="highlight yaml"><figcaption><span>文件路径\themes\next\source\css\_my\mycss.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">//修改不蒜子数据颜色</span></span><br><span class="line"><span class="string">.busuanzi-value</span> <span class="string">&#123;</span></span><br><span class="line">  <span class="attr">color:</span> <span class="comment">#1890ff;</span></span><br><span class="line"><span class="string">&#125;`</span></span><br></pre></td></tr></table></figure>
+<p>在next7.7.1版本中，自定义的样式文件均独立到styles.sytl中的，以便于后续更方便的版本更新。</p>
+<figure class="highlight yaml"><figcaption><span>文件路径\themes\next\source\_data\styles.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">//修改不蒜子数据颜色</span></span><br><span class="line"><span class="string">.busuanzi-value</span> <span class="string">&#123;</span></span><br><span class="line">  <span class="attr">color:</span> <span class="comment">#1890ff;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
 
 <p>最后修改统计表述文案：</p>
 <figure class="highlight yaml"><figcaption><span>文件路径\themes\next\languanges\zh-CN.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">footer:</span></span><br><span class="line">  <span class="attr">total_views:</span> <span class="string">"历经 %s 次回眸才与你相遇"</span></span><br><span class="line">  <span class="attr">total_visitors:</span> <span class="string">"我的第 %s 位朋友，"</span><span class="string">`</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>大功告成</strong></p>
-<p><img src="http://q54tnf1e7.bkt.clouddn.com/20200212031151.png" alt=""></p>
-<hr>
+<p><img src="http://q54tnf1e7.bkt.clouddn.com/20200301231232.png?imageView2/0/interlace/1/q/88%7Cwatermark/2/text/QOWHoOexs-Wkp-Wkpw==/font/5qW35L2T/fontsize/560/fill/IzNEM0Q0Ng==/dissolve/66/gravity/SouthEast/dx/10/dy/10%7Cimageslim" alt=""></p>
+<blockquote>
+<p>这里数据有误，是因为本地显示busuanzi的bug，发布到公网上去就正常了，不必惊讶。</p>
+</blockquote>
 <h5 id="插入外链图片大小设置"><a href="#插入外链图片大小设置" class="headerlink" title="插入外链图片大小设置"></a>插入外链图片大小设置</h5><p>在文件首行添加以下代码，<code>max-width</code>的值可以自行调整，我这里是调整为88%，看着舒服。</p>
-<figure class="highlight yaml"><figcaption><span>文件路径\themes\next\source\css\main.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">.main</span> <span class="string">img</span> <span class="string">&#123;</span></span><br><span class="line">    <span class="attr">max-width:</span> <span class="number">88</span><span class="string">%;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><figcaption><span>文件路径\themes\next\source\_data\styles.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">.main</span> <span class="string">img</span> <span class="string">&#123;</span></span><br><span class="line">    <span class="attr">max-width:</span> <span class="number">88</span><span class="string">%;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
 
 <p>这个是调整后的效果图：来一个我最喜欢的球星吧</p>
 <p><img src="http://q54tnf1e7.bkt.clouddn.com/077%E7%90%83%E5%9C%BA.jpg?imageView2/0/interlace/1/q/88%7Cwatermark/2/text/QOWHoOexs-Wkp-Wkpw==/font/5qW35L2T/fontsize/560/fill/IzNEM0Q0Ng==/dissolve/66/gravity/SouthEast/dx/10/dy/10%7Cimageslim" alt=""></p>
-<h5 id="自定义样式文件并调用"><a href="#自定义样式文件并调用" class="headerlink" title="自定义样式文件并调用"></a>自定义样式文件并调用</h5><p>比如在创建自己的介绍页面<code>about</code>的时候，想使用自定义的css样式文件，因为Markdown支持html标签，所以这是可行的。</p>
-<h6 id="添加自定义样式支持"><a href="#添加自定义样式支持" class="headerlink" title="添加自定义样式支持"></a>添加自定义样式支持</h6><p>使用子集的方式进行css样式文件的添加，再进行引用即可</p>
-<figure class="highlight yaml"><figcaption><span>文件路径\themes\next\source\css\main.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">//My</span> <span class="string">Layer</span></span><br><span class="line"><span class="string">//-------------------------------------------</span></span><br><span class="line"><span class="string">@import</span> <span class="string">"_my/mycss"</span></span><br></pre></td></tr></table></figure>
-<h6 id="新建自定义样式"><a href="#新建自定义样式" class="headerlink" title="新建自定义样式"></a>新建自定义样式</h6><p>在路径\themes\next\source\css中，新建一个”_my”文件夹，在该文件夹中再新建mycss.styl文件即可</p>
-<h6 id="编辑自定义样式"><a href="#编辑自定义样式" class="headerlink" title="编辑自定义样式"></a>编辑自定义样式</h6><figure class="highlight plain"><figcaption><span>自定义你想要的样式</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;自定义回到顶部样式</span><br><span class="line">.back-to-top &#123;</span><br><span class="line">  right: 60px;</span><br><span class="line">  width: 70px;  &#x2F;&#x2F;图片素材宽度</span><br><span class="line">  height: 900px;  &#x2F;&#x2F;图片素材高度</span><br><span class="line">  top: -900px;</span><br><span class="line">  bottom: unset;</span><br><span class="line">  transition: all .5s ease-in-out;</span><br><span class="line">  background: url(&quot;&#x2F;images&#x2F;scroll.png&quot;);</span><br><span class="line"></span><br><span class="line">  &#x2F;&#x2F;隐藏箭头图标</span><br><span class="line">  &gt; i &#123;</span><br><span class="line">    display: none;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  &amp;.back-to-top-on &#123;</span><br><span class="line">    bottom: unset;</span><br><span class="line">    top: 100vh &lt; (900px + 200px) ? calc( 100vh - 900px - 200px ) : 0px;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;修改busuanzi数据颜色</span><br><span class="line">.busuanzi-value &#123;</span><br><span class="line">  color: #1890ff;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="取消目录默认序号"><a href="#取消目录默认序号" class="headerlink" title="取消目录默认序号"></a>取消目录默认序号</h5><figure class="highlight yaml"><figcaption><span>主题配置文件\themes\next\_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">toc:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Automatically add list number to toc.</span></span><br><span class="line">  <span class="attr">number:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<p>将number修改为<span class="label warning">false</span>即可</p>
 <h5 id="增加标签小图标"><a href="#增加标签小图标" class="headerlink" title="增加标签小图标"></a>增加标签小图标</h5><figure class="highlight yaml"><figcaption><span>在\themes\next\layout\_macro\post.swig中</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&lt;footer</span> <span class="string">class="post-footer"&gt;</span></span><br><span class="line">  <span class="string">&#123;%-</span> <span class="string">if</span> <span class="string">post.tags</span> <span class="string">and</span> <span class="string">post.tags.length</span> <span class="string">%&#125;</span></span><br><span class="line">    <span class="string">&#123;%-</span> <span class="string">if</span> <span class="string">theme.tag_icon</span> <span class="string">%&#125;</span></span><br><span class="line">      <span class="string">&#123;%-</span> <span class="string">set</span> <span class="string">tag_indicate</span> <span class="string">=</span> <span class="string">'&lt;i class="fa fa-paper-plane"&gt;&lt;/i&gt;'</span> <span class="string">%&#125;</span></span><br><span class="line">    <span class="string">&#123;%</span> <span class="string">else</span> <span class="string">%&#125;</span></span><br><span class="line">      <span class="string">&#123;%-</span> <span class="string">set</span> <span class="string">tag_indicate</span> <span class="string">=</span> <span class="string">'&lt;i class="fa fa-paper-plane"&gt;&lt;/i&gt;'</span> <span class="string">%&#125;</span></span><br></pre></td></tr></table></figure>
 <p>将<code>i class=&quot;fa fa-tags&quot;</code>修改为<code>i class=&quot;fa fa-paper-plane&quot;</code><br>hexo的小图标使用的是<a href="https://fontawesome.com/v4.7.0/icons/" target="_blank" rel="noopener">Font Awesome</a></p>
 <h5 id="多级分类"><a href="#多级分类" class="headerlink" title="多级分类"></a>多级分类</h5><figure class="highlight yaml"><figcaption><span>直接在父分类下再写一个即可，注意这里不是同级分类而是父子分类关系</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Markdown基础语法(基本写作要求)</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2020</span><span class="number">-02</span><span class="number">-07</span> <span class="number">17</span><span class="string">:43:58</span></span><br><span class="line"><span class="attr">tags:</span> <span class="string">[Markdown,技术]</span></span><br><span class="line"><span class="attr">categories:</span> </span><br><span class="line"><span class="bullet">-</span> <span class="string">技术</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">博客</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="设置文章加密"><a href="#设置文章加密" class="headerlink" title="设置文章加密"></a>设置文章加密</h4><p>在站点根目录中执行以下命令安装依赖</p>
+<blockquote>
+<p><code>npm install hexo-blog-encrypt --save</code></p>
+</blockquote>
+<p>在站点配置文件中添加如下字段：</p>
+<figure class="highlight yml"><figcaption><span>文件路径：\hexo\_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">encrypt:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">default_abstract:</span> <span class="string">此文章已被加密，需要输入密码访问。</span>  <span class="string">//首页文章列表中加密文章的默认描述文案</span></span><br><span class="line">  <span class="attr">default_message:</span> <span class="string">请输入密码以阅读这篇私密文章。</span>  <span class="string">//文章详情页的密码输入框上的默认描述文案</span></span><br></pre></td></tr></table></figure>
+
+<p>在你所需要的文章中添加<code>password</code>字段用于<strong>设置文章访问密码</strong></p>
+<p>发现默认的样式不符合心意，自定义使用<a href="https://sweetalert.js.org/" target="_blank" rel="noopener">sweetalert</a>来美化错误提示。</p>
+<p>在自定义布局文件中添加如下代码：</p>
+<figure class="highlight yml"><figcaption><span>文件路径：\themes\next\layout\_custom\custom.swig</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&lt;script</span> <span class="string">src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>如果custom.swig文件不存在，则需要手动创建并在布局页面中body的末尾引入：</p>
+<figure class="highlight yml"><figcaption><span>文件路径：\themes\next\layout\_layout.swig</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">+</span>     <span class="string">&#123;%</span> <span class="string">include</span> <span class="string">'_custom/custom.swig'</span> <span class="string">%&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>在 node_modules 依赖库中修改 hexo-blog-encrypt 源码：</p>
+<figure class="highlight yml"><figcaption><span>文件路径：node_modules\hexo-blog-encrypt\lib\blog.encrypt.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">...</span></span><br><span class="line">  <span class="string">&#125;</span> <span class="string">catch</span> <span class="string">(e)</span> <span class="string">&#123;</span></span><br><span class="line"><span class="bullet">-</span>   <span class="string">alert(decryptionError);</span></span><br><span class="line"><span class="string">+</span>   <span class="string">swal(&#123;</span></span><br><span class="line"><span class="string">+</span>     <span class="attr">text:</span> <span class="string">"密码错误!"</span><span class="string">,</span></span><br><span class="line"><span class="string">+</span>     <span class="attr">icon:</span> <span class="string">"error"</span><span class="string">,</span></span><br><span class="line"><span class="string">+</span>     <span class="attr">className:</span> <span class="string">"password-error"</span><span class="string">,</span></span><br><span class="line"><span class="string">+</span>     <span class="attr">timer:</span> <span class="number">1000</span><span class="string">,</span></span><br><span class="line"><span class="string">+</span>     <span class="attr">button:</span> <span class="literal">false</span></span><br><span class="line"><span class="string">+</span>   <span class="string">&#125;);</span></span><br><span class="line">    <span class="string">console.log(e);</span></span><br><span class="line">  <span class="string">&#125;</span></span><br><span class="line">  <span class="string">..</span></span><br></pre></td></tr></table></figure>
+
+<p>在自定义样式文件中添加如下代码：</p>
+<figure class="highlight yml"><figcaption><span>文件路径：\hexo\source\_data\styles.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">//密码错误sweetalert弹框样式修改</span></span><br><span class="line"><span class="string">.swal-overlay</span> <span class="string">&#123;</span></span><br><span class="line">  <span class="attr">background-color:</span> <span class="string">transparent;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">.password-error</span> <span class="string">&#123;</span></span><br><span class="line">  <span class="attr">box-shadow:</span> <span class="string">0px</span> <span class="string">4px</span> <span class="string">12px</span> <span class="string">rgba(0,</span> <span class="number">0</span><span class="string">,</span> <span class="number">0</span><span class="string">,</span> <span class="number">0.15</span><span class="string">);</span></span><br><span class="line">  <span class="attr">border-radius:</span> <span class="string">4px;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+<p><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code>看预览效果如下<br><img src="http://q54tnf1e7.bkt.clouddn.com/20200301235912.png?imageView2/0/interlace/1/q/88%7Cwatermark/2/text/QOWHoOexs-Wkp-Wkpw==/font/5qW35L2T/fontsize/560/fill/IzNEM0Q0Ng==/dissolve/66/gravity/SouthEast/dx/10/dy/10%7Cimageslim" alt="加密后显示自定义的文字"></p>
+<p><img src="http://q54tnf1e7.bkt.clouddn.com/20200302000036.png?imageView2/0/interlace/1/q/88%7Cwatermark/2/text/QOWHoOexs-Wkp-Wkpw==/font/5qW35L2T/fontsize/560/fill/IzNEM0Q0Ng==/dissolve/66/gravity/SouthEast/dx/10/dy/10%7Cimageslim" alt="点击阅读全文"></p>
+<p><img src="http://q54tnf1e7.bkt.clouddn.com/20200302000136.png?imageView2/0/interlace/1/q/88%7Cwatermark/2/text/QOWHoOexs-Wkp-Wkpw==/font/5qW35L2T/fontsize/560/fill/IzNEM0Q0Ng==/dissolve/66/gravity/SouthEast/dx/10/dy/10%7Cimageslim" alt="输入错误密码后的弹窗"></p>
+<h4 id="鼠标点击添加爆炸特效"><a href="#鼠标点击添加爆炸特效" class="headerlink" title="鼠标点击添加爆炸特效"></a>鼠标点击添加爆炸特效</h4><p>在以下路径中手动创建一个<code>explosion.js</code>文件：</p>
+<figure class="highlight yml"><figcaption><span>文件路径：\themes\next\source\js\explosion.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"use strict"</span><span class="string">;function</span> <span class="string">updateCoords(e)&#123;pointerX=(e.clientX||e.touches[0].clientX)-canvasEl.getBoundingClientRect().left,pointerY=e.clientY||e.touches[0].clientY-canvasEl.getBoundingClientRect().top&#125;function</span> <span class="string">setParticuleDirection(e)&#123;var</span> <span class="string">t=anime.random(0,360)*Math.PI/180,a=anime.random(50,180),n=[-1,1][anime.random(0,1)]*a;return&#123;x:e.x+n*Math.cos(t),y:e.y+n*Math.sin(t)&#125;&#125;function</span> <span class="string">createParticule(e,t)&#123;var</span> <span class="string">a=&#123;&#125;;return</span> <span class="string">a.x=e,a.y=t,a.color=colors[anime.random(0,colors.length-1)],a.radius=anime.random(16,32),a.endPos=setParticuleDirection(a),a.draw=function()&#123;ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,2*Math.PI,!0),ctx.fillStyle=a.color,ctx.fill()&#125;,a&#125;function</span> <span class="string">createCircle(e,t)&#123;var</span> <span class="string">a=&#123;&#125;;return</span> <span class="string">a.x=e,a.y=t,a.color="#F00",a.radius=0.1,a.alpha=0.5,a.lineWidth=6,a.draw=function()&#123;ctx.globalAlpha=a.alpha,ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,2*Math.PI,!0),ctx.lineWidth=a.lineWidth,ctx.strokeStyle=a.color,ctx.stroke(),ctx.globalAlpha=1&#125;,a&#125;function</span> <span class="string">renderParticule(e)&#123;for(var</span> <span class="string">t=0;t&lt;e.animatables.length;t++)&#123;e.animatables[t].target.draw()&#125;&#125;function</span> <span class="string">animateParticules(e,t)&#123;for(var</span> <span class="string">a=createCircle(e,t),n=[],i=0;i&lt;numberOfParticules;i++)&#123;n.push(createParticule(e,t))&#125;anime.timeline().add(&#123;targets:n,x:function(e)&#123;return</span> <span class="string">e.endPos.x&#125;,y:function(e)&#123;return</span> <span class="string">e.endPos.y&#125;,radius:0.1,duration:anime.random(1200,1800),easing:"easeOutExpo",update:renderParticule&#125;).add(&#123;targets:a,radius:anime.random(80,160),lineWidth:0,alpha:&#123;value:0,easing:"linear",duration:anime.random(600,800)&#125;,duration:anime.random(1200,1800),easing:"easeOutExpo",update:renderParticule,offset:0&#125;)&#125;function</span> <span class="string">debounce(e,t)&#123;var</span> <span class="string">a;return</span> <span class="string">function()&#123;var</span> <span class="string">n=this,i=arguments;clearTimeout(a),a=setTimeout(function()&#123;e.apply(n,i)&#125;,t)&#125;&#125;var</span> <span class="string">canvasEl=document.querySelector(".fireworks");if(canvasEl)&#123;var</span> <span class="string">ctx=canvasEl.getContext("2d"),numberOfParticules=30,pointerX=0,pointerY=0,tap="mousedown",colors=["#FF1461","#18FF92","#5A87FF","#FBF38C"],setCanvasSize=debounce(function()&#123;canvasEl.width=2*window.innerWidth,canvasEl.height=2*window.innerHeight,canvasEl.style.width=window.innerWidth+"px",canvasEl.style.height=window.innerHeight+"px",canvasEl.getContext("2d").scale(2,2)&#125;,500),render=anime(&#123;duration:1/0,update:function()&#123;ctx.clearRect(0,0,canvasEl.width,canvasEl.height)&#125;&#125;);document.addEventListener(tap,function(e)&#123;"sidebar"!==e.target.id&amp;&amp;"toggle-sidebar"!==e.target.id&amp;&amp;"A"!==e.target.nodeName&amp;&amp;"IMG"!==e.target.nodeName&amp;&amp;(render.play(),updateCoords(e),animateParticules(pointerX,pointerY))&#125;,!1),setCanvasSize(),window.addEventListener("resize",setCanvasSize,!1)&#125;"use</span> <span class="string">strict";function</span> <span class="string">updateCoords(e)&#123;pointerX=(e.clientX||e.touches[0].clientX)-canvasEl.getBoundingClientRect().left,pointerY=e.clientY||e.touches[0].clientY-canvasEl.getBoundingClientRect().top&#125;function</span> <span class="string">setParticuleDirection(e)&#123;var</span> <span class="string">t=anime.random(0,360)*Math.PI/180,a=anime.random(50,180),n=[-1,1][anime.random(0,1)]*a;return&#123;x:e.x+n*Math.cos(t),y:e.y+n*Math.sin(t)&#125;&#125;function</span> <span class="string">createParticule(e,t)&#123;var</span> <span class="string">a=&#123;&#125;;return</span> <span class="string">a.x=e,a.y=t,a.color=colors[anime.random(0,colors.length-1)],a.radius=anime.random(16,32),a.endPos=setParticuleDirection(a),a.draw=function()&#123;ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,2*Math.PI,!0),ctx.fillStyle=a.color,ctx.fill()&#125;,a&#125;function</span> <span class="string">createCircle(e,t)&#123;var</span> <span class="string">a=&#123;&#125;;return</span> <span class="string">a.x=e,a.y=t,a.color="#F00",a.radius=0.1,a.alpha=0.5,a.lineWidth=6,a.draw=function()&#123;ctx.globalAlpha=a.alpha,ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,2*Math.PI,!0),ctx.lineWidth=a.lineWidth,ctx.strokeStyle=a.color,ctx.stroke(),ctx.globalAlpha=1&#125;,a&#125;function</span> <span class="string">renderParticule(e)&#123;for(var</span> <span class="string">t=0;t&lt;e.animatables.length;t++)&#123;e.animatables[t].target.draw()&#125;&#125;function</span> <span class="string">animateParticules(e,t)&#123;for(var</span> <span class="string">a=createCircle(e,t),n=[],i=0;i&lt;numberOfParticules;i++)&#123;n.push(createParticule(e,t))&#125;anime.timeline().add(&#123;targets:n,x:function(e)&#123;return</span> <span class="string">e.endPos.x&#125;,y:function(e)&#123;return</span> <span class="string">e.endPos.y&#125;,radius:0.1,duration:anime.random(1200,1800),easing:"easeOutExpo",update:renderParticule&#125;).add(&#123;targets:a,radius:anime.random(80,160),lineWidth:0,alpha:&#123;value:0,easing:"linear",duration:anime.random(600,800)&#125;,duration:anime.random(1200,1800),easing:"easeOutExpo",update:renderParticule,offset:0&#125;)&#125;function</span> <span class="string">debounce(e,t)&#123;var</span> <span class="string">a;return</span> <span class="string">function()&#123;var</span> <span class="string">n=this,i=arguments;clearTimeout(a),a=setTimeout(function()&#123;e.apply(n,i)&#125;,t)&#125;&#125;var</span> <span class="string">canvasEl=document.querySelector(".fireworks");if(canvasEl)&#123;var</span> <span class="string">ctx=canvasEl.getContext("2d"),numberOfParticules=30,pointerX=0,pointerY=0,tap="mousedown",colors=["#FF1461","#18FF92","#5A87FF","#FBF38C"],setCanvasSize=debounce(function()&#123;canvasEl.width=2*window.innerWidth,canvasEl.height=2*window.innerHeight,canvasEl.style.width=window.innerWidth+"px",canvasEl.style.height=window.innerHeight+"px",canvasEl.getContext("2d").scale(2,2)&#125;,500),render=anime(&#123;duration:1/0,update:function()&#123;ctx.clearRect(0,0,canvasEl.width,canvasEl.height)&#125;&#125;);document.addEventListener(tap,function(e)&#123;"sidebar"!==e.target.id&amp;&amp;"toggle-sidebar"!==e.target.id&amp;&amp;"A"!==e.target.nodeName&amp;&amp;"IMG"!==e.target.nodeName&amp;&amp;(render.play(),updateCoords(e),animateParticules(pointerX,pointerY))&#125;,!1),setCanvasSize(),window.addEventListener("resize",setCanvasSize,!1)&#125;;</span></span><br></pre></td></tr></table></figure>
+
+<p>在主题自定义布局文件中，添加以下代码：</p>
+<figure class="highlight yml"><figcaption><span>文件路径：\themes\next\layout\_custom\custom.swig</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#123;#</span> <span class="string">鼠标点击特效</span> <span class="comment">#&#125;</span></span><br><span class="line"><span class="string">&#123;%</span> <span class="string">if</span> <span class="string">theme.cursor_effect</span> <span class="string">==</span> <span class="string">"fireworks"</span> <span class="string">%&#125;</span></span><br><span class="line">  <span class="string">&lt;script</span> <span class="string">async</span> <span class="string">src="/js/fireworks.js"&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">&#123;%</span> <span class="string">elseif</span> <span class="string">theme.cursor_effect</span> <span class="string">==</span> <span class="string">"explosion"</span> <span class="string">%&#125;</span></span><br><span class="line">  <span class="string">&lt;canvas</span> <span class="string">class="fireworks"</span> <span class="string">style="position:</span> <span class="string">fixed;left:</span> <span class="number">0</span><span class="string">;top:</span> <span class="number">0</span><span class="string">;z-index:</span> <span class="number">1</span><span class="string">;</span> <span class="attr">pointer-events:</span> <span class="string">none;"</span> <span class="string">&gt;&lt;/canvas&gt;</span></span><br><span class="line">  <span class="string">&lt;script</span> <span class="string">src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"&gt;&lt;/script&gt;</span></span><br><span class="line">  <span class="string">&lt;script</span> <span class="string">async</span> <span class="string">src="/js/explosion.js"&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">&#123;%</span> <span class="string">elseif</span> <span class="string">theme.cursor_effect</span> <span class="string">==</span> <span class="string">"love"</span> <span class="string">%&#125;</span></span><br><span class="line">  <span class="string">&lt;script</span> <span class="string">async</span> <span class="string">src="/js/love.js"&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">&#123;%</span> <span class="string">elseif</span> <span class="string">theme.cursor_effect</span> <span class="string">==</span> <span class="string">"text"</span> <span class="string">%&#125;</span></span><br><span class="line">  <span class="string">&lt;script</span> <span class="string">async</span> <span class="string">src="/js/text.js"&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">&#123;%</span> <span class="string">endif</span> <span class="string">%&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>如果 custom.swig 文件不存在，我们可以手动新建这个文件并在布局页面 themes\next\layout_layout.swig 中 body 末尾引入：</p>
+<figure class="highlight yml"><figcaption><span>文件路径：themes\next\layout\_layout.swig</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">      <span class="string">...</span></span><br><span class="line">      <span class="string">&#123;%</span> <span class="string">include</span> <span class="string">'_third-party/exturl.swig'</span> <span class="string">%&#125;</span></span><br><span class="line">      <span class="string">&#123;%</span> <span class="string">include</span> <span class="string">'_third-party/bookmark.swig'</span> <span class="string">%&#125;</span></span><br><span class="line">      <span class="string">&#123;%</span> <span class="string">include</span> <span class="string">'_third-party/copy-code.swig'</span> <span class="string">%&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">+</span>     <span class="string">&#123;%</span> <span class="string">include</span> <span class="string">'_custom/custom.swig'</span> <span class="string">%&#125;</span></span><br><span class="line">    <span class="string">&lt;/body&gt;</span></span><br><span class="line">  <span class="string">&lt;/html&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>然后我们在主题配置文件中添加以下代码：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># mouse click effect: fireworks | explosion | love | text</span></span><br><span class="line"><span class="attr">cursor_effect:</span> <span class="string">fireworks</span></span><br></pre></td></tr></table></figure>
+<p>然后就可以一键切换各种鼠标点击的特效了。</p>
+
     </div>
 
     
@@ -364,7 +401,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://jimmyh.site/archives/de3600d4.html" title="Github+hexo搭建个人博客踩坑记录">https://jimmyh.site/archives/de3600d4.html</a>
+    <a href="https://jimmyh.site/archives/de3600d4.html" title="hexo next主题添加个性化设置">https://jimmyh.site/archives/de3600d4.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -376,8 +413,7 @@
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/Git/" rel="tag"><i class="fa fa-tags"></i># Git</a>
-              <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tags"></i># Hexo</a>
-              <a href="/tags/Error/" rel="tag"><i class="fa fa-tags"></i># Error</a>
+              <a href="/tags/next%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE/" rel="tag"><i class="fa fa-tags"></i># next个性化设置</a>
           </div>
 
         
@@ -452,7 +488,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#busuanzi显示不了站点访问统计"><span class="nav-number">1.</span> <span class="nav-text">busuanzi显示不了站点访问统计</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#插入外链图片大小设置"><span class="nav-number">2.</span> <span class="nav-text">插入外链图片大小设置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#自定义样式文件并调用"><span class="nav-number">3.</span> <span class="nav-text">自定义样式文件并调用</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#添加自定义样式支持"><span class="nav-number">3.1.</span> <span class="nav-text">添加自定义样式支持</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#新建自定义样式"><span class="nav-number">3.2.</span> <span class="nav-text">新建自定义样式</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#编辑自定义样式"><span class="nav-number">3.3.</span> <span class="nav-text">编辑自定义样式</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#取消目录默认序号"><span class="nav-number">4.</span> <span class="nav-text">取消目录默认序号</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#增加标签小图标"><span class="nav-number">5.</span> <span class="nav-text">增加标签小图标</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#多级分类"><span class="nav-number">6.</span> <span class="nav-text">多级分类</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#busuanzi显示不了站点访问统计"><span class="nav-number">1.</span> <span class="nav-text">busuanzi显示不了站点访问统计</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#插入外链图片大小设置"><span class="nav-number">2.</span> <span class="nav-text">插入外链图片大小设置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#增加标签小图标"><span class="nav-number">3.</span> <span class="nav-text">增加标签小图标</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#多级分类"><span class="nav-number">4.</span> <span class="nav-text">多级分类</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置文章加密"><span class="nav-number"></span> <span class="nav-text">设置文章加密</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#鼠标点击添加爆炸特效"><span class="nav-number"></span> <span class="nav-text">鼠标点击添加爆炸特效</span></a></div>
       </div>
       <!--/noindex-->
 
@@ -481,7 +517,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-count">16</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -797,13 +833,13 @@ if(canvas.getContext){
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">25k</span>
+    <span title="站点总字数">72k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">24 分钟</span>
+    <span title="站点阅读时长">1:08</span>
 </div>
 
 
@@ -928,6 +964,15 @@ if(canvas.getContext){
   timer();
   setInterval("timer()",1000)
 </script>
+
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
+  <script src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+  <script async src="/js/explosion.js"></script>
 
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"left","width":150,"height":200,"opacityDefault":0.7,"opacityHover":1},"mobile":{"show":true},"log":false,"tagMode":false});</script></body>
 </html>
