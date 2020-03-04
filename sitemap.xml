@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://jimmyh.site/splunk/index.html</loc>
+    <loc>https://jimmyh.site/archives/d4dbd5d5.html</loc>
     
-    <lastmod>2020-03-04T08:09:32.698Z</lastmod>
+    <lastmod>2020-03-04T17:48:11.747Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jimmyh.site/analysis/index.html</loc>
+    
+    <lastmod>2020-03-04T17:39:03.017Z</lastmod>
     
   </url>
   
@@ -110,13 +117,6 @@
     <loc>https://jimmyh.site/archives/b3667c2d.html</loc>
     
     <lastmod>2020-02-29T18:15:04.238Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jimmyh.site/archives/d4dbd5d5.html</loc>
-    
-    <lastmod>2020-02-28T23:56:25.102Z</lastmod>
     
   </url>
   

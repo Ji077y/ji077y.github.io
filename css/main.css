@@ -1213,7 +1213,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #75a21f;
+  background: #6f7a1c;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2751,14 +2751,14 @@ ul.breadcrumb li + li:last-child {
   }
 }
 body {
-  background: url("/images/james2.jpg");
+  background: url("/images/coffee1.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: 50% 50%;
 }
 .content-wrap {
-  opacity: 0.86;
+  opacity: 0.85;
 }
 .sidebar {
   opacity: 0.8;
