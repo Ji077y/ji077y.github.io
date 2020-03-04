@@ -85,6 +85,7 @@
 <blockquote>
 <p>Regular Expression 一般翻译为正则、正规或常规，即“描述某种规则的表达式”之意。     </p>
 </blockquote>
+<a id="more"></a>
 <p>最初的正则表达式出现于理论计算机科学的自动控制理论和形式化语言理论中。在这些领域中有对计算（自动控制）的模型和对形式化语言描述与分类的研究。    </p>
 <p>1940年，沃伦·麦卡洛克与Walter Pitts（英语：Walter Pitts）将神经系统中的神经元描述成小而简单的自动控制元。    </p>
 <p>1950年代，数学家斯蒂芬·科尔·克莱尼利用称之为“正则集合”的数学符号来描述此模型。肯·汤普逊将此符号系统引入编辑器QED（英语：QED (text editor)），随后是Unix上的编辑器ed（英语：ed(text editor)），并最终引入grep。自此以后，正则表达式被广泛地应用于各种Unix或类Unix系统的工具中。正则表达式的POSIX规范，分为基本型正则表达式（Basic Regular Expression，BRE）和扩展型正则表达式（Extended Regular Express，ERE）两大流派。在兼容POSIX的UNIX系统上，grep和egrep之类的工具都遵循POSIX规范，一些数据库系统中的正则表达式也符合POSIX规范。grep、vi、sed都属于BRE，是历史最早的正则表达式，因此元字符必须转译之后才具有特殊含义。egrep、awk则属于ERE，元字符不用转译。    </p>
