@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Jimmy先森</title>
-  <icon>https://077.ink/icon.png</icon>
+  <icon>https://jimmyh.site/icon.png</icon>
   <subtitle>thinking</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://077.ink/"/>
+  <link href="https://jimmyh.site/"/>
   <updated>2020-03-01T16:25:35.053Z</updated>
-  <id>https://077.ink/</id>
+  <id>https://jimmyh.site/</id>
   
   <author>
     <name>Jimmy Huang</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>CES销售培训-第二章客户拜访</title>
-    <link href="https://077.ink/archives/c0b08501.html"/>
-    <id>https://077.ink/archives/c0b08501.html</id>
+    <link href="https://jimmyh.site/archives/c0b08501.html"/>
+    <id>https://jimmyh.site/archives/c0b08501.html</id>
     <published>2020-03-01T10:01:27.000Z</published>
     <updated>2020-03-01T16:25:35.053Z</updated>
     
@@ -30,17 +30,17 @@
     </summary>
     
     
-      <category term="销售培训" scheme="https://077.ink/categories/%E9%94%80%E5%94%AE%E5%9F%B9%E8%AE%AD/"/>
+      <category term="销售培训" scheme="https://jimmyh.site/categories/%E9%94%80%E5%94%AE%E5%9F%B9%E8%AE%AD/"/>
     
     
-      <category term="销售培训-客户拜访" scheme="https://077.ink/tags/%E9%94%80%E5%94%AE%E5%9F%B9%E8%AE%AD-%E5%AE%A2%E6%88%B7%E6%8B%9C%E8%AE%BF/"/>
+      <category term="销售培训-客户拜访" scheme="https://jimmyh.site/tags/%E9%94%80%E5%94%AE%E5%9F%B9%E8%AE%AD-%E5%AE%A2%E6%88%B7%E6%8B%9C%E8%AE%BF/"/>
     
   </entry>
   
   <entry>
     <title>hexo-增加个性化运行时间和粒子时钟</title>
-    <link href="https://077.ink/archives/b3667c2d.html"/>
-    <id>https://077.ink/archives/b3667c2d.html</id>
+    <link href="https://jimmyh.site/archives/b3667c2d.html"/>
+    <id>https://jimmyh.site/archives/b3667c2d.html</id>
     <published>2020-02-29T17:28:27.000Z</published>
     <updated>2020-02-29T18:15:04.238Z</updated>
     
@@ -54,19 +54,19 @@
     </summary>
     
     
-      <category term="技术" scheme="https://077.ink/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://jimmyh.site/categories/%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="博客" scheme="https://077.ink/categories/%E6%8A%80%E6%9C%AF/%E5%8D%9A%E5%AE%A2/"/>
+      <category term="博客" scheme="https://jimmyh.site/categories/%E6%8A%80%E6%9C%AF/%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="hexo搭建" scheme="https://077.ink/tags/hexo%E6%90%AD%E5%BB%BA/"/>
+      <category term="hexo搭建" scheme="https://jimmyh.site/tags/hexo%E6%90%AD%E5%BB%BA/"/>
     
   </entry>
   
   <entry>
     <title>Covid-19 纪实-深圳（第25天）</title>
-    <link href="https://077.ink/archives/d4dbd5d5.html"/>
-    <id>https://077.ink/archives/d4dbd5d5.html</id>
+    <link href="https://jimmyh.site/archives/d4dbd5d5.html"/>
+    <id>https://jimmyh.site/archives/d4dbd5d5.html</id>
     <published>2020-02-24T13:13:52.000Z</published>
     <updated>2020-03-04T17:48:11.747Z</updated>
     
@@ -78,17 +78,17 @@
     </summary>
     
     
-      <category term="武汉新型冠状病毒" scheme="https://077.ink/categories/%E6%AD%A6%E6%B1%89%E6%96%B0%E5%9E%8B%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92/"/>
+      <category term="武汉新型冠状病毒" scheme="https://jimmyh.site/categories/%E6%AD%A6%E6%B1%89%E6%96%B0%E5%9E%8B%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92/"/>
     
     
-      <category term="疫情记录" scheme="https://077.ink/tags/%E7%96%AB%E6%83%85%E8%AE%B0%E5%BD%95/"/>
+      <category term="疫情记录" scheme="https://jimmyh.site/tags/%E7%96%AB%E6%83%85%E8%AE%B0%E5%BD%95/"/>
     
   </entry>
   
   <entry>
     <title>正则表达式学习（1）</title>
-    <link href="https://077.ink/archives/b057b7f7.html"/>
-    <id>https://077.ink/archives/b057b7f7.html</id>
+    <link href="https://jimmyh.site/archives/b057b7f7.html"/>
+    <id>https://jimmyh.site/archives/b057b7f7.html</id>
     <published>2020-02-19T06:32:21.000Z</published>
     <updated>2020-03-02T01:16:10.025Z</updated>
     
@@ -102,19 +102,19 @@
     </summary>
     
     
-      <category term="技术" scheme="https://077.ink/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://jimmyh.site/categories/%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="正则" scheme="https://077.ink/categories/%E6%8A%80%E6%9C%AF/%E6%AD%A3%E5%88%99/"/>
+      <category term="正则" scheme="https://jimmyh.site/categories/%E6%8A%80%E6%9C%AF/%E6%AD%A3%E5%88%99/"/>
     
     
-      <category term="正则表达式" scheme="https://077.ink/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+      <category term="正则表达式" scheme="https://jimmyh.site/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>居家coffee&amp;Strawberry</title>
-    <link href="https://077.ink/archives/5f3743f1.html"/>
-    <id>https://077.ink/archives/5f3743f1.html</id>
+    <link href="https://jimmyh.site/archives/5f3743f1.html"/>
+    <id>https://jimmyh.site/archives/5f3743f1.html</id>
     <published>2020-02-13T08:51:08.000Z</published>
     <updated>2020-03-01T13:32:53.945Z</updated>
     
@@ -128,19 +128,19 @@
     </summary>
     
     
-      <category term="咖啡" scheme="https://077.ink/categories/%E5%92%96%E5%95%A1/"/>
+      <category term="咖啡" scheme="https://jimmyh.site/categories/%E5%92%96%E5%95%A1/"/>
     
     
-      <category term="咖啡" scheme="https://077.ink/tags/%E5%92%96%E5%95%A1/"/>
+      <category term="咖啡" scheme="https://jimmyh.site/tags/%E5%92%96%E5%95%A1/"/>
     
-      <category term="美食" scheme="https://077.ink/tags/%E7%BE%8E%E9%A3%9F/"/>
+      <category term="美食" scheme="https://jimmyh.site/tags/%E7%BE%8E%E9%A3%9F/"/>
     
   </entry>
   
   <entry>
     <title>Covid-19 纪实-深圳（第14天）</title>
-    <link href="https://077.ink/archives/fc23d982.html"/>
-    <id>https://077.ink/archives/fc23d982.html</id>
+    <link href="https://jimmyh.site/archives/fc23d982.html"/>
+    <id>https://jimmyh.site/archives/fc23d982.html</id>
     <published>2020-02-12T15:42:59.000Z</published>
     <updated>2020-03-01T13:35:25.217Z</updated>
     
@@ -154,19 +154,19 @@
     </summary>
     
     
-      <category term="武汉新型冠状病毒" scheme="https://077.ink/categories/%E6%AD%A6%E6%B1%89%E6%96%B0%E5%9E%8B%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92/"/>
+      <category term="武汉新型冠状病毒" scheme="https://jimmyh.site/categories/%E6%AD%A6%E6%B1%89%E6%96%B0%E5%9E%8B%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92/"/>
     
     
-      <category term="疫情记录" scheme="https://077.ink/tags/%E7%96%AB%E6%83%85%E8%AE%B0%E5%BD%95/"/>
+      <category term="疫情记录" scheme="https://jimmyh.site/tags/%E7%96%AB%E6%83%85%E8%AE%B0%E5%BD%95/"/>
     
-      <category term="炖汤" scheme="https://077.ink/tags/%E7%82%96%E6%B1%A4/"/>
+      <category term="炖汤" scheme="https://jimmyh.site/tags/%E7%82%96%E6%B1%A4/"/>
     
   </entry>
   
   <entry>
     <title>hexo next主题添加个性化设置</title>
-    <link href="https://077.ink/archives/de3600d4.html"/>
-    <id>https://077.ink/archives/de3600d4.html</id>
+    <link href="https://jimmyh.site/archives/de3600d4.html"/>
+    <id>https://jimmyh.site/archives/de3600d4.html</id>
     <published>2020-02-09T15:59:18.000Z</published>
     <updated>2020-03-01T17:21:01.161Z</updated>
     
@@ -179,21 +179,21 @@
     </summary>
     
     
-      <category term="技术" scheme="https://077.ink/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://jimmyh.site/categories/%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="博客" scheme="https://077.ink/categories/%E6%8A%80%E6%9C%AF/%E5%8D%9A%E5%AE%A2/"/>
+      <category term="博客" scheme="https://jimmyh.site/categories/%E6%8A%80%E6%9C%AF/%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="Git" scheme="https://077.ink/tags/Git/"/>
+      <category term="Git" scheme="https://jimmyh.site/tags/Git/"/>
     
-      <category term="next个性化设置" scheme="https://077.ink/tags/next%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE/"/>
+      <category term="next个性化设置" scheme="https://jimmyh.site/tags/next%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE/"/>
     
   </entry>
   
   <entry>
     <title>元宵美食</title>
-    <link href="https://077.ink/archives/f7d51ec2.html"/>
-    <id>https://077.ink/archives/f7d51ec2.html</id>
+    <link href="https://jimmyh.site/archives/f7d51ec2.html"/>
+    <id>https://jimmyh.site/archives/f7d51ec2.html</id>
     <published>2020-02-08T15:41:22.000Z</published>
     <updated>2020-03-01T13:34:19.325Z</updated>
     
@@ -207,23 +207,23 @@
     </summary>
     
     
-      <category term="美食" scheme="https://077.ink/categories/%E7%BE%8E%E9%A3%9F/"/>
+      <category term="美食" scheme="https://jimmyh.site/categories/%E7%BE%8E%E9%A3%9F/"/>
     
     
-      <category term="炖汤" scheme="https://077.ink/tags/%E7%82%96%E6%B1%A4/"/>
+      <category term="炖汤" scheme="https://jimmyh.site/tags/%E7%82%96%E6%B1%A4/"/>
     
-      <category term="家常菜" scheme="https://077.ink/tags/%E5%AE%B6%E5%B8%B8%E8%8F%9C/"/>
+      <category term="家常菜" scheme="https://jimmyh.site/tags/%E5%AE%B6%E5%B8%B8%E8%8F%9C/"/>
     
-      <category term="水果捞" scheme="https://077.ink/tags/%E6%B0%B4%E6%9E%9C%E6%8D%9E/"/>
+      <category term="水果捞" scheme="https://jimmyh.site/tags/%E6%B0%B4%E6%9E%9C%E6%8D%9E/"/>
     
-      <category term="节日" scheme="https://077.ink/tags/%E8%8A%82%E6%97%A5/"/>
+      <category term="节日" scheme="https://jimmyh.site/tags/%E8%8A%82%E6%97%A5/"/>
     
   </entry>
   
   <entry>
     <title>2019-nCoV 纪实-深圳（第10天）</title>
-    <link href="https://077.ink/archives/3736d6d.html"/>
-    <id>https://077.ink/archives/3736d6d.html</id>
+    <link href="https://jimmyh.site/archives/3736d6d.html"/>
+    <id>https://jimmyh.site/archives/3736d6d.html</id>
     <published>2020-02-08T15:40:49.000Z</published>
     <updated>2020-03-01T13:31:32.710Z</updated>
     
@@ -237,19 +237,19 @@
     </summary>
     
     
-      <category term="武汉新型冠状病毒" scheme="https://077.ink/categories/%E6%AD%A6%E6%B1%89%E6%96%B0%E5%9E%8B%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92/"/>
+      <category term="武汉新型冠状病毒" scheme="https://jimmyh.site/categories/%E6%AD%A6%E6%B1%89%E6%96%B0%E5%9E%8B%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92/"/>
     
     
-      <category term="疫情记录" scheme="https://077.ink/tags/%E7%96%AB%E6%83%85%E8%AE%B0%E5%BD%95/"/>
+      <category term="疫情记录" scheme="https://jimmyh.site/tags/%E7%96%AB%E6%83%85%E8%AE%B0%E5%BD%95/"/>
     
-      <category term="NBA" scheme="https://077.ink/tags/NBA/"/>
+      <category term="NBA" scheme="https://jimmyh.site/tags/NBA/"/>
     
   </entry>
   
   <entry>
     <title>Markdown基础语法(基本写作要求)</title>
-    <link href="https://077.ink/archives/e7fb8192.html"/>
-    <id>https://077.ink/archives/e7fb8192.html</id>
+    <link href="https://jimmyh.site/archives/e7fb8192.html"/>
+    <id>https://jimmyh.site/archives/e7fb8192.html</id>
     <published>2020-02-07T09:43:58.000Z</published>
     <updated>2020-03-01T13:38:39.871Z</updated>
     
@@ -263,21 +263,21 @@
     </summary>
     
     
-      <category term="技术" scheme="https://077.ink/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://jimmyh.site/categories/%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="博客" scheme="https://077.ink/categories/%E6%8A%80%E6%9C%AF/%E5%8D%9A%E5%AE%A2/"/>
+      <category term="博客" scheme="https://jimmyh.site/categories/%E6%8A%80%E6%9C%AF/%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="Markdown" scheme="https://077.ink/tags/Markdown/"/>
+      <category term="Markdown" scheme="https://jimmyh.site/tags/Markdown/"/>
     
-      <category term="技术" scheme="https://077.ink/tags/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://jimmyh.site/tags/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title>Git分布式管理系统学习</title>
-    <link href="https://077.ink/archives/cd181654.html"/>
-    <id>https://077.ink/archives/cd181654.html</id>
+    <link href="https://jimmyh.site/archives/cd181654.html"/>
+    <id>https://jimmyh.site/archives/cd181654.html</id>
     <published>2020-02-07T08:48:20.000Z</published>
     <updated>2020-03-01T13:36:21.123Z</updated>
     
@@ -296,19 +296,19 @@ $ git init&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;pwd是看当前的路径,通过git i
     </summary>
     
     
-      <category term="技术" scheme="https://077.ink/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://jimmyh.site/categories/%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="Git" scheme="https://077.ink/categories/%E6%8A%80%E6%9C%AF/Git/"/>
+      <category term="Git" scheme="https://jimmyh.site/categories/%E6%8A%80%E6%9C%AF/Git/"/>
     
     
-      <category term="Git" scheme="https://077.ink/tags/Git/"/>
+      <category term="Git" scheme="https://jimmyh.site/tags/Git/"/>
     
   </entry>
   
   <entry>
     <title>2019-nCoV 纪实-深圳(第9天)</title>
-    <link href="https://077.ink/archives/8ecc7090.html"/>
-    <id>https://077.ink/archives/8ecc7090.html</id>
+    <link href="https://jimmyh.site/archives/8ecc7090.html"/>
+    <id>https://jimmyh.site/archives/8ecc7090.html</id>
     <published>2020-02-06T17:01:34.000Z</published>
     <updated>2020-03-01T13:26:33.613Z</updated>
     
@@ -321,17 +321,17 @@ $ git init&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;pwd是看当前的路径,通过git i
     </summary>
     
     
-      <category term="武汉新型冠状病毒" scheme="https://077.ink/categories/%E6%AD%A6%E6%B1%89%E6%96%B0%E5%9E%8B%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92/"/>
+      <category term="武汉新型冠状病毒" scheme="https://jimmyh.site/categories/%E6%AD%A6%E6%B1%89%E6%96%B0%E5%9E%8B%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92/"/>
     
     
-      <category term="疫情记录" scheme="https://077.ink/tags/%E7%96%AB%E6%83%85%E8%AE%B0%E5%BD%95/"/>
+      <category term="疫情记录" scheme="https://jimmyh.site/tags/%E7%96%AB%E6%83%85%E8%AE%B0%E5%BD%95/"/>
     
   </entry>
   
   <entry>
     <title>温暖的鸡汤</title>
-    <link href="https://077.ink/archives/df27ed4e.html"/>
-    <id>https://077.ink/archives/df27ed4e.html</id>
+    <link href="https://jimmyh.site/archives/df27ed4e.html"/>
+    <id>https://jimmyh.site/archives/df27ed4e.html</id>
     <published>2020-02-03T14:27:41.000Z</published>
     <updated>2020-03-01T13:33:29.662Z</updated>
     
@@ -351,17 +351,17 @@ $ git init&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;pwd是看当前的路径,通过git i
     </summary>
     
     
-      <category term="美食" scheme="https://077.ink/categories/%E7%BE%8E%E9%A3%9F/"/>
+      <category term="美食" scheme="https://jimmyh.site/categories/%E7%BE%8E%E9%A3%9F/"/>
     
     
-      <category term="炖汤" scheme="https://077.ink/tags/%E7%82%96%E6%B1%A4/"/>
+      <category term="炖汤" scheme="https://jimmyh.site/tags/%E7%82%96%E6%B1%A4/"/>
     
   </entry>
   
   <entry>
     <title>jimmy say hello</title>
-    <link href="https://077.ink/archives/be786d7b.html"/>
-    <id>https://077.ink/archives/be786d7b.html</id>
+    <link href="https://jimmyh.site/archives/be786d7b.html"/>
+    <id>https://jimmyh.site/archives/be786d7b.html</id>
     <published>2020-02-01T16:46:34.000Z</published>
     <updated>2020-03-01T13:37:55.686Z</updated>
     
@@ -380,10 +380,10 @@ $ git init&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;pwd是看当前的路径,通过git i
     </summary>
     
     
-      <category term="日常" scheme="https://077.ink/categories/%E6%97%A5%E5%B8%B8/"/>
+      <category term="日常" scheme="https://jimmyh.site/categories/%E6%97%A5%E5%B8%B8/"/>
     
     
-      <category term="新世界" scheme="https://077.ink/tags/%E6%96%B0%E4%B8%96%E7%95%8C/"/>
+      <category term="新世界" scheme="https://jimmyh.site/tags/%E6%96%B0%E4%B8%96%E7%95%8C/"/>
     
   </entry>
   
