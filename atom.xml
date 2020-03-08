@@ -3,7 +3,7 @@
   <title>Jimmy先森</title>
   <icon>https://077.ink/icon.png</icon>
   <subtitle>thinking</subtitle>
-  <link href="/atom.xml" rel="self"/>
+  <link href="/var/www/blog/atom.xml" rel="self"/>
   
   <link href="https://077.ink/"/>
   <updated>2020-03-01T16:25:35.053Z</updated>
