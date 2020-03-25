@@ -103,7 +103,7 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-        <p class="site-subtitle">thinking</p>
+        <p class="site-subtitle">少吹牛逼，踏实做事</p>
   </div>
 
   <div class="site-nav-right">
@@ -222,7 +222,7 @@
     <link itemprop="mainEntityOfPage" href="https://077.ink/archives/cd181654.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/kobe2.png">
+      <meta itemprop="image" content="/images/cat1.jpg">
       <meta itemprop="name" content="Jimmy Huang">
       <meta itemprop="description" content="Now or Never">
     </span>
@@ -265,7 +265,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>387</span>
+              <span>1.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -288,19 +288,64 @@
 </blockquote>
 
 <p><a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">廖雪峰老师的Git教程</a></p>
-<h5 id="Git的初始化"><a href="#Git的初始化" class="headerlink" title="Git的初始化"></a>Git的初始化</h5><h6 id="创建一个版本库"><a href="#创建一个版本库" class="headerlink" title="创建一个版本库"></a>创建一个版本库</h6><pre><code>$ mkdir GitLearn
-$ cd GitLearn
-$ ls
-$ pwd
-$ git init</code></pre><p>pwd是看当前的路径,通过git init命令会创建一个”.git”文件，将目录变成git可以管理的仓库。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/archives/cd181654.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+<h2 id="Git出现的历史原因"><a href="#Git出现的历史原因" class="headerlink" title="Git出现的历史原因"></a>Git出现的历史原因</h2><h3 id="Git是什么"><a href="#Git是什么" class="headerlink" title="Git是什么"></a>Git是什么</h3><blockquote>
+<p>目前世界上最先进的<strong>分布式版本控制系统</strong></p>
+</blockquote>
+<p>它会非常详细的记住文件的修改信息，例如被修改文件名、修改用户、说明还有修改日期，像下面这张图一样</p>
+<p><img src="http://pic.077.ink/image-20200325225144743diff0.png?image/auto-orient,1/quality,q_90/watermark,text_5Yeg57Gz5aSn5aSn,type_ZmFuZ3poZW5na2FpdGk,color_091b4b,size_28,shadow_38,g_se,x_10,y_10" alt="示例"></p>
+<h3 id="版本控制系统的历史"><a href="#版本控制系统的历史" class="headerlink" title="版本控制系统的历史"></a>版本控制系统的历史</h3><p>在遥远的1991年，我出生的那年，很荣幸啊，Linus创建了开源的Linux系统，目前已经成长为最大的服务器系统软件。</p>
+<p>Linus是怎么管理这个开源的系统呢？毕竟这个系统是全世界各地的程序员一起贡献的代码。</p>
+<p>在2002年以前，世界各地的大佬都是把源代码文件通过<strong>diff</strong>的方式发送给Linus，然后由Linus通过手工方式合并代码！真是热爱代码的Linus啊，我是佩服的五体投地的。</p>
+<h4 id="diff"><a href="#diff" class="headerlink" title="diff"></a>diff</h4><p><a href="http://www.ruanyifeng.com/blog/2012/08/how_to_read_diff.html" target="_blank" rel="noopener">点我读懂diff方式</a></p>
+<blockquote>
+<p>diff是UNIX系统的一个很重要的<strong>工具程序</strong></p>
+<ul>
+<li>用来比较两个文件文本的差异，是代码版本管理的基石之一</li>
+</ul>
+</blockquote>
+<p>通过键入命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ diff &lt;变动前的文件&gt; &lt;变动后的文件&gt;</span><br></pre></td></tr></table></figure>
+
+<p>diff就会告诉你，这两个文件有什么不同，显示大概如下：</p>
+<p><img src="http://pic.077.ink/image-20200325231306613diff1.png?image/auto-orient,1/quality,q_90/watermark,text_5Yeg57Gz5aSn5aSn,type_ZmFuZ3poZW5na2FpdGk,color_091b4b,size_28,shadow_38,g_se,x_10,y_10" alt="diff回显"></p>
+<p>diff的三种格式，为啥有三种呢？历史的巨轮总是推着技术前进的，有需求就有技术去实现，那么diff也是一个道理，那么diff在进化的道路上的三个格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">　　* 正常格式（normal diff）</span><br><span class="line"></span><br><span class="line">　　* 上下文格式（context diff）</span><br><span class="line"></span><br><span class="line">　　* 合并格式（unified diff）</span><br></pre></td></tr></table></figure>
+
+<p>文件f1</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a</span><br><span class="line">a</span><br><span class="line">a</span><br><span class="line">a</span><br><span class="line">a</span><br><span class="line">a</span><br><span class="line">a</span><br></pre></td></tr></table></figure>
+
+<p>文件f2</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a</span><br><span class="line">a</span><br><span class="line">a</span><br><span class="line">b</span><br><span class="line">a</span><br><span class="line">a</span><br><span class="line">a</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="正常格式"><a href="#正常格式" class="headerlink" title="正常格式"></a>正常格式</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ diff f1 f2</span><br></pre></td></tr></table></figure>
+
+<p>此时回显为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">　　4c4    &#x2F;&#x2F; c是change的意思，f1的第四行改变</span><br><span class="line">　　&lt; a    &#x2F;&#x2F; &lt; 是去除该行的意思</span><br><span class="line">　　---    &#x2F;&#x2F; 分割线</span><br><span class="line">　　&gt; b    &#x2F;&#x2F; &gt; 是增加了该行</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>劣势：如果文件非常大，这个时候，看得人可是会晕掉的！so，这个设计被pass掉</p>
+</blockquote>
+<h5 id="上下文格式"><a href="#上下文格式" class="headerlink" title="上下文格式"></a>上下文格式</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ diff -c f1 f2</span><br></pre></td></tr></table></figure>
+
+<p>此时回显为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">　　*** f1 2012-08-29 16:45:41.000000000 +0800  &#x2F;&#x2F; 基本信息</span><br><span class="line">　　--- f2 2012-08-29 16:45:51.000000000 +0800  &#x2F;&#x2F; 基本信息</span><br><span class="line">　　***************                             &#x2F;&#x2F; 分割线</span><br><span class="line">　　*** 1,7 ****                                &#x2F;&#x2F; 表示从第一行开始连续7行</span><br><span class="line">　　 a</span><br><span class="line">　　 a</span><br><span class="line">　　 a</span><br><span class="line">　　!a  &#x2F;&#x2F; ！表示该行有变动</span><br><span class="line">　　 a</span><br><span class="line">　　 a</span><br><span class="line">　　 a</span><br><span class="line">　　--- 1,7 ----</span><br><span class="line">　　 a</span><br><span class="line">　　 a</span><br><span class="line">　　 a</span><br><span class="line">　　!b  &#x2F;&#x2F; ！表示该行有变动且显示变动后的内容</span><br><span class="line">　　 a</span><br><span class="line">　　 a</span><br><span class="line">　　 a</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>同样的，这个设计回显，也是会因为文件太大而造成阅读非常困难，so，这个设计也被pass掉</p>
+</blockquote>
+<h5 id="合并格式"><a href="#合并格式" class="headerlink" title="合并格式"></a>合并格式</h5><blockquote>
+<p>在当时的时代背景下，已经有CVS和SVN的版本控制系统，为啥Linus大佬不用呢？？？</p>
+<ul>
+<li>Linus坚定地反对CVS和SVN，这些集中式的版本控制系统不但速度慢，而且<strong>必须联网</strong>才能使用！！！</li>
+</ul>
+</blockquote>
+
       
     </div>
 
@@ -322,7 +367,7 @@ $ git init</code></pre><p>pwd是看当前的路径,通过git init命令会创建
     <link itemprop="mainEntityOfPage" href="https://077.ink/archives/8ecc7090.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/kobe2.png">
+      <meta itemprop="image" content="/images/cat1.jpg">
       <meta itemprop="name" content="Jimmy Huang">
       <meta itemprop="description" content="Now or Never">
     </span>
@@ -412,7 +457,7 @@ $ git init</code></pre><p>pwd是看当前的路径,通过git init命令会创建
     <link itemprop="mainEntityOfPage" href="https://077.ink/archives/df27ed4e.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/kobe2.png">
+      <meta itemprop="image" content="/images/cat1.jpg">
       <meta itemprop="name" content="Jimmy Huang">
       <meta itemprop="description" content="Now or Never">
     </span>
@@ -509,7 +554,7 @@ $ git init</code></pre><p>pwd是看当前的路径,通过git init命令会创建
     <link itemprop="mainEntityOfPage" href="https://077.ink/archives/be786d7b.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/kobe2.png">
+      <meta itemprop="image" content="/images/cat1.jpg">
       <meta itemprop="name" content="Jimmy Huang">
       <meta itemprop="description" content="Now or Never">
     </span>
@@ -647,7 +692,7 @@ $ git init</code></pre><p>pwd是看当前的路径,通过git init命令会创建
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Jimmy Huang"
-      src="/images/kobe2.png">
+      src="/images/cat1.jpg">
   <p class="site-author-name" itemprop="name">Jimmy Huang</p>
   <div class="site-description" itemprop="description">Now or Never</div>
 </div>
@@ -985,13 +1030,13 @@ if(canvas.getContext){
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">72k</span>
+    <span title="站点总字数">73k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:08</span>
+    <span title="站点阅读时长">1:09</span>
 </div>
 
 

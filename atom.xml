@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Jimmy先森</title>
   <icon>https://077.ink/icon.png</icon>
-  <subtitle>thinking</subtitle>
+  <subtitle>少吹牛逼，踏实做事</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://077.ink/"/>
@@ -279,19 +279,20 @@
     <link href="https://077.ink/archives/cd181654.html"/>
     <id>https://077.ink/archives/cd181654.html</id>
     <published>2020-02-07T08:48:20.000Z</published>
-    <updated>2020-03-01T13:36:21.123Z</updated>
+    <updated>2020-03-25T16:27:05.247Z</updated>
     
     <summary type="html">
     
-      &lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;p&gt;Coding Change World &lt;/p&gt;
+      
+      
+        
+        
+          &lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;p&gt;Coding Change World &lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.liaoxuefeng.com/wiki/896043488029600&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;廖雪峰老师的Git教程&lt;/a&gt;&lt;/p&gt;
-&lt;h5 id=&quot;Git的初始化&quot;&gt;&lt;a href=&quot;#Git的初始化&quot; class=&quot;headerlink&quot; title=&quot;Git的初始化&quot;&gt;&lt;/a&gt;Git的初始化&lt;/h5&gt;&lt;h6 id=&quot;创建一个版本库&quot;&gt;&lt;a href=&quot;#创建一个版本库&quot; class=&quot;headerlink&quot; title=&quot;创建一个版本库&quot;&gt;&lt;/a&gt;创建一个版本库&lt;/h6&gt;&lt;pre&gt;&lt;code&gt;$ mkdir GitLearn
-$ cd GitLearn
-$ ls
-$ pwd
-$ git init&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;pwd是看当前的路径,通过git init命令会创建一个”.git”文件，将目录变成git可以管理的仓库。&lt;/p&gt;
+&lt;p&gt;&lt;a
+        
+      
     
     </summary>
     
