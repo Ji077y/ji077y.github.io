@@ -1213,7 +1213,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #cf6fff;
+  background: #f7635c;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2751,7 +2751,7 @@ ul.breadcrumb li + li:last-child {
   }
 }
 body {
-  background: url("/images/tothedream.jpg");
+  background: url("/images/13.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
