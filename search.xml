@@ -3,7 +3,10 @@
   <entry>
     <title>Github 443端口劫持事件分析</title>
     <url>/archives/f2c5af7b.html</url>
-    <content><![CDATA[<h1 id="事件记录"><a href="#事件记录" class="headerlink" title="事件记录"></a>事件记录</h1><p><a href="https://www.freebuf.com/news/231667.html" target="_blank" rel="noopener">Freebuf事件报道</a></p>
+    <content><![CDATA[<p><img src="http://pic.077.ink/443%E8%AF%81%E4%B9%A6_202003312350.jpg" alt=""></p>
+<a id="more"></a>
+
+<h1 id="事件记录"><a href="#事件记录" class="headerlink" title="事件记录"></a>事件记录</h1><p><a href="https://www.freebuf.com/news/231667.html" target="_blank" rel="noopener">Freebuf事件报道</a></p>
 <p><a href="https://v2ex.com/t/656367" target="_blank" rel="noopener">V2EX上的讨论文章</a></p>
 <blockquote>
 <p>昨天，2020年3月26-27日，中国大陆无法访问github网站，疑似有攻击者大规模发起中间人劫持攻击。据说是除了Github网站之外，还有京东、koajs等其他网站也受到了影响。</p>
@@ -12,44 +15,47 @@
 <p>京东在27号访问已经没有问题了，自己验证也没有看到有问题的证书，京东处理能力牛逼呢？还是攻击者这是试试京东，劫持后又立马改回去了？</p>
 </blockquote>
 <h2 id="时间线"><a href="#时间线" class="headerlink" title="时间线"></a>时间线</h2><ul>
-<li><strong>2020.3.26</strong> 晚间，18点左右，情报反馈有攻击者在大陆正在发动大规模的中间人攻击劫持京东和Github等网站<ul>
-<li>受到影响的有部分地区用户涉及所有运营商</li>
-<li>中国移动、联通、电信以及教育网均可以复现，挂VPN外网访问是正常的</li>
-</ul>
+<li><p><strong>2020.3.26</strong> 晚间，18点左右，情报反馈有攻击者在大陆正在发动大规模的中间人攻击劫持京东和Github等网站。受到影响的有部分地区用户涉及所有运营商，中国移动、联通、电信以及教育网均可以复现，挂VPN外网访问是正常的</p>
 </li>
-<li><strong>2020.3.27</strong> 全天 ，国内舆论已经将热度搞起来了，各大网络安全媒体纷纷报道此次事件<ul>
-<li>09:00  攻击范围似乎正在扩大，<a href="https://github.com/" target="_blank" rel="noopener">Github.com</a>主站点也被劫持导致知名众多开源项目现在全部无法访问</li>
-<li>09:53  经测试目前Github.com主站点正在陆续恢复中，部分地区的用户访问可能还会出现劫持请稍后</li>
-<li>10:36  据测试Github.com主站点目前又挂了，证书还是那个自签名证书因此和之前劫持信息是相同的</li>
-<li>10:58  攻击者的自签名证书从“<a href="mailto:346608453@qq.com">346608453@qq.com</a>”更换为“<a href="mailto:1396060845037@mymail.com">1396060845037@mymail.com</a>”</li>
-</ul>
+<li><p><strong>2020.3.27</strong> 全天 ，国内舆论已经将热度搞起来了，各大网络安全媒体纷纷报道此次事件</p>
+<blockquote>
+<p>09:00  攻击范围似乎正在扩大，<a href="https://github.com/" target="_blank" rel="noopener">Github.com</a>主站点也被劫持导致知名众多开源项目现在全部无法访问</p>
+</blockquote>
+<blockquote>
+<p>09:53  经测试目前Github.com主站点正在陆续恢复中，部分地区的用户访问可能还会出现劫持请稍后</p>
+</blockquote>
+<blockquote>
+<p>10:36  据测试Github.com主站点目前又挂了，证书还是那个自签名证书因此和之前劫持信息是相同的</p>
+</blockquote>
+<blockquote>
+<p>10:58  攻击者的自签名证书从“<a href="mailto:346608453@qq.com">346608453@qq.com</a>”更换为“<a href="mailto:1396060845037@mymail.com">1396060845037@mymail.com</a>”</p>
+</blockquote>
 </li>
-<li><strong>2020.3.28</strong> <ul>
-<li>0:27  大规模劫持情况基本已经消失，全国绝大部分地区访问已经恢复正常</li>
-<li>00:30  被认为是此次攻击者的QQ 346608453 主动发布动态称账号被盗，很明显这个只是个“替罪羔羊”</li>
-</ul>
+<li><p><strong>2020.3.28</strong> </p>
+<blockquote>
+<p>0:27  大规模劫持情况基本已经消失，全国绝大部分地区访问已经恢复正常</p>
+</blockquote>
+<blockquote>
+<p>00:30  被认为是此次攻击者的QQ 346608453 主动发布动态称账号被盗，很明显这个只是个“替罪羔羊”</p>
+</blockquote>
 </li>
 </ul>
 <h2 id="情报追踪"><a href="#情报追踪" class="headerlink" title="情报追踪"></a>情报追踪</h2><p>从证书报错这个信息来看：</p>
 <p><img src="http://pic.077.ink/20200327095620github%E8%AF%81%E4%B9%A6%E5%8A%AB%E6%8C%81%E6%88%AA%E5%9B%BE.png" alt="img"></p>
 <ul>
-<li>QQ号 346608453这个是攻击者的信息<ul>
-<li>拜托，做坏事能把自己主动暴露出来？？？脑子进水了？</li>
-<li>坊间传闻该QQ号的主人还是个学生，是个黑客初学者，居然可以做到<ul>
+<li>QQ号 346608453这个是攻击者的信息<blockquote>
+<p>拜托，做坏事能把自己主动暴露出来？？？脑子进水了？，坊间传闻该QQ号的主人还是个学生，是个黑客初学者，居然可以做到：</p>
+<ul>
 <li>控制三网骨干路由器伪造路由？</li>
-<li>在全国各地跑 anycast的服务器（被劫持的TCP ping 全国都很低）？</li>
 <li>服务器在国内没有被拔线，路由器的改动到现在无法恢复？</li>
-</ul>
-</li>
 <li>别说是个高中生，就算你是电信老板恐怕也没有这个本事</li>
 </ul>
+</blockquote>
 </li>
 </ul>
 <p>昨天自己验证的，发现QQ改为邮箱了：</p>
 <p>![image-20200328220135082](C:\Users\Jimmy Huang\AppData\Roaming\Typora\typora-user-images\image-20200328220135082.png)</p>
-<ul>
-<li>还会主动修改，这个坏人，也有看社会舆论吧，为啥换QQ为邮箱呢？这QQ号和这个邮箱有什么联系呢？目前情报还不清楚</li>
-</ul>
+<p>还会主动修改，这个坏人，也有看社会舆论吧，为啥换QQ为邮箱呢？这QQ号和这个邮箱有什么联系呢？目前情报还不清楚</p>
 <p>![image-20200328223157836](C:\Users\Jimmy Huang\AppData\Roaming\Typora\typora-user-images\image-20200328223157836.png)</p>
 <p>嗯，看看，QQ号的真正拥有者发布的状态，也有可能现在还是被盗的状态，然后在27号中午将QQ改为邮箱后，又出来做个个人说明，制造假象。</p>
 <h1 id="技术分析"><a href="#技术分析" class="headerlink" title="技术分析"></a>技术分析</h1><p><a href="https://www.zhihu.com/question/382702036" target="_blank" rel="noopener">参考分析文章</a></p>
