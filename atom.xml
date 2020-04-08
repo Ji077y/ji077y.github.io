@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Jimmy先森</title>
   <icon>https://077.ink/icon.png</icon>
-  <subtitle>少吹牛逼，踏实做事</subtitle>
+  <subtitle>森林暗处都是带枪的猎人</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://077.ink/"/>
-  <updated>2020-03-31T03:39:52.737Z</updated>
+  <updated>2020-04-07T14:13:18.900Z</updated>
   <id>https://077.ink/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>DNS解析与实现探究</title>
+    <link href="https://077.ink/archives/3fc41e5c.html"/>
+    <id>https://077.ink/archives/3fc41e5c.html</id>
+    <published>2020-04-05T16:57:19.000Z</published>
+    <updated>2020-04-07T14:13:18.900Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://pic.077.ink/DNS%E8%A7%A3%E6%9E%90%E4%B8%8E%E5%AE%9E%E7%8E%B0%E5%B0%81%E9%9D%A21.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://077.ink/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="网络基础" scheme="https://077.ink/categories/%E6%8A%80%E6%9C%AF/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="网络基础知识" scheme="https://077.ink/tags/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    
+  </entry>
   
   <entry>
     <title>GithubPages+Hexo+CloudFare访问速度优化</title>
