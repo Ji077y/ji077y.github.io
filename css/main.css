@@ -1213,7 +1213,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #24b8c4;
+  background: #5921ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2751,14 +2751,14 @@ ul.breadcrumb li + li:last-child {
   }
 }
 body {
-  background: url("/images/forestgame.jpg");
+  background: url("/images/road.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: 50% 50%;
 }
 .content-wrap {
-  opacity: 0.95;
+  opacity: 0.9;
 }
 .sidebar {
   opacity: 0.7;
