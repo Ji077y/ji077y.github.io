@@ -6,16 +6,12 @@
     <content><![CDATA[<p><img src="http://pic.077.ink/DNS%E8%A7%A3%E6%9E%90%E4%B8%8E%E5%AE%9E%E7%8E%B0%E5%B0%81%E9%9D%A21.jpg" alt=""></p>
 <a id="more"></a>
 
-<h1 id="什么是DNS"><a href="#什么是DNS" class="headerlink" title="什么是DNS"></a>什么是DNS</h1><p><a href="[https://zh.wikipedia.org/wiki/%E5%9F%9F%E5%90%8D%E7%B3%BB%E7%BB%9F](https://zh.wikipedia.org/wiki/域名系统)">维基百科-DNS</a></p>
-<p><a href="https://www.youtube.com/watch?v=1ZBqfuFdBCU" target="_blank" rel="noopener">油管视频解析dns</a></p>
-<p><a href="https://www.ruanyifeng.com/blog/2016/06/dns.html" target="_blank" rel="noopener">阮一峰日志-DNS原理入门</a></p>
-<p><a href="https://www.cnblogs.com/littlehann/p/3828927.html" target="_blank" rel="noopener">其他参考1</a></p>
-<p><a href="https://www.jianshu.com/p/4394aaf97492" target="_blank" rel="noopener">其他参考2</a></p>
-<p><a href="https://teamonn.github.io/" target="_blank" rel="noopener">其他参考3</a></p>
-<p>DNS是互联网核心协议之一，英文全称为：Domain Name System，中文全称为：域名解析服务。</p>
+
+
+<h1 id="什么是DNS"><a href="#什么是DNS" class="headerlink" title="什么是DNS"></a>什么是DNS</h1><p>DNS是互联网核心协议之一，英文全称为：Domain Name System，中文全称为：域名解析服务。</p>
 <p>DNS的特点：</p>
 <ul>
-<li>是一个<strong>将域名和IP地址相互映射的分布式数据库</strong>。可以让人们更方便的访问互联网</li>
+<li>是一个<strong>将域名和IP地址相互映射的超级分布式数据库</strong>。可以让人们更方便的访问互联网</li>
 <li>使用TCP和UDP的53端口</li>
 <li>使用C/S架构，有客户端和服务器两个部分</li>
 <li>服务器一般使用BIND（Berkley Internet Name Domain），客户端使用共享库-由其他应用调用</li>
@@ -27,18 +23,49 @@
 <li>.abc.com  这个是<strong>域名</strong></li>
 </ul>
 </blockquote>
-<h2 id="域名结构"><a href="#域名结构" class="headerlink" title="域名结构"></a>域名结构</h2><blockquote>
+<h1 id="DNS的历史"><a href="#DNS的历史" class="headerlink" title="DNS的历史"></a>DNS的历史</h1><h2 id="早期-hosts文件解析方式"><a href="#早期-hosts文件解析方式" class="headerlink" title="早期-hosts文件解析方式"></a>早期-hosts文件解析方式</h2><p>在互联网发展的早期，互联网主机数量不多，IP地址难以记住，所以有了对于主机名的需求，希望用“主机名”与服务器通信。这个时候，host文件的文件就暂时解决了这个需求，txt文档里面记录了IP地址与主机名的对应关系。记得小时候去网吧里面玩，如果访问不到某个网站了，网吧的网管就会过来查看下这个host文件是不是没有设置好。</p>
+<p>到了后来，互联网主机越来越多，hosts文件无法支撑庞大的数据对应关系时，就出现了DNS服务器。</p>
+<h2 id="中期-DNS服务器提供hosts文件"><a href="#中期-DNS服务器提供hosts文件" class="headerlink" title="中期-DNS服务器提供hosts文件"></a>中期-DNS服务器提供hosts文件</h2><blockquote>
+<p>IANA：负责互联网地址分配，管理互联网上面主机名与IP地址的对应关系。</p>
+</blockquote>
+<p>早期的实现： 将解析库（文本文件）通过ftp发布出来。世界各地的Unix主机管理员，设定任务计划，定时的获取解析库文件到本地，实时进行更新。</p>
+<p>客户端在有主机名解析请求发生时，通过调用DNS客户端的“共享库”（现在已经成为 glibc 标准库的一部分），去本地的hosts文件获取到解析结果。</p>
+<p>后续，从ftp共享发展到了DNS（中心服务器，使用高可用集群避免服务中断），在本地请求发出后，会优先查询本地的hosts文件，然后才会向DNS服务器进行请求。此时，我们需要的是快速的DNS响应请求，默认使用的是UDP协议（不需要进行三次握手，使用53端口）</p>
+<h2 id="域名解析结果被缓存"><a href="#域名解析结果被缓存" class="headerlink" title="域名解析结果被缓存"></a>域名解析结果被缓存</h2><blockquote>
+<p>并不需要每次向主机名发起请求，都需要向DNS服务器请求进行名称解析</p>
+</blockquote>
+<p>因为IP地址不会经常变动，在<strong>本地DNS客户端第一次得到解析结果后，本地DNS客户端会将解析结果存储在本地，建立缓存。</strong> </p>
+<p>但是，随着互联网迅猛发展，即使有本地缓存等技术减轻DNS服务器的压力，但是渐渐地一台中心服务器已经难以应付这个工作，这是DNS服务器就进入了下一个阶段：将名称实现分布式应用。</p>
+<h2 id="域名解析进入分布式阶段"><a href="#域名解析进入分布式阶段" class="headerlink" title="域名解析进入分布式阶段"></a>域名解析进入分布式阶段</h2><p>DNS在这个时期，采用了<strong>授权管理机制</strong></p>
+<ol>
+<li>根域</li>
+<li>顶级域</li>
+<li>二级域</li>
+<li>三级域名-建立主机</li>
+</ol>
+<blockquote>
+<p>根域和顶级域由IANA直接管理</p>
+<p>二级域，公司，组织和个人可以直接通过域名注册商进行申请注册</p>
+<ul>
+<li>二级域申请好了之后，可以<strong>直接在域内建立主机</strong><ul>
+<li>例如申请了077.ink的一级域名</li>
+<li>可以自行建立如a.077.ink、b.077.ink等合法主机名</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h1 id="域名结构"><a href="#域名结构" class="headerlink" title="域名结构"></a>域名结构</h1><blockquote>
 <p>网址的域名结构：<code>[protocol]//[hostname][port][path][query][hash]</code></p>
 </blockquote>
 <p>例如：<a href="https://www.077.com:8080/home?id=66#xkgfwei76" target="_blank" rel="noopener">https://www.077.com:8080/home?id=66#xkgfwei76</a></p>
 <p>对于主机名：<a href="http://www.077.com" target="_blank" rel="noopener">www.077.com</a> 本身，是一个树形结构，比较复杂，实际的写法应该是：<code>www.077.com.</code> ，日常我们访问站点的时候，为了方便，不会写最后的<code>.</code>  </p>
-<h3 id="DNS解析结构"><a href="#DNS解析结构" class="headerlink" title="DNS解析结构"></a>DNS解析结构</h3><blockquote>
+<h2 id="DNS解析结构"><a href="#DNS解析结构" class="headerlink" title="DNS解析结构"></a>DNS解析结构</h2><blockquote>
 <ol>
 <li>根域：Root Domain 即<code>.</code></li>
 </ol>
 </blockquote>
 <p>在linux中，使用<code>dig</code>命令获取顶级域：</p>
-<p><img src="http://pic.077.ink/dig%E5%91%BD%E4%BB%A4%E5%9B%9E%E6%98%BE%E8%8E%B7%E5%8F%96%E6%A0%B9%E5%9F%9F-20200406233703.png?x-oss-process=style/blog_20200322" alt="dig命令回显获取根域"></p>
+<p><img src="http://pic.077.ink/dig%E5%91%BD%E4%BB%A4%E5%9B%9E%E6%98%BE%E8%8E%B7%E5%8F%96%E6%A0%B9%E5%9F%9F-20200406233703.png?x-oss-process=style/blog_20200322" alt=""></p>
 <blockquote>
 <ol start="2">
 <li>顶级域：Top-Level Domain </li>
@@ -49,7 +76,7 @@
 </ul>
 </blockquote>
 <p>在linux中使用<code>dig com +trace</code>命令追踪com域名的解析过程：</p>
-<p><img src="http://pic.077.ink/dig%E5%91%BD%E4%BB%A4%E8%BF%BD%E8%B8%AAcom%E8%A7%A3%E6%9E%90%E8%BF%87%E7%A8%8B-20200406234324.png?x-oss-process=style/blog_20200322" alt="dig命令追踪com解析过程"></p>
+<p><img src="http://pic.077.ink/dig%E5%91%BD%E4%BB%A4%E8%BF%BD%E8%B8%AAcom%E8%A7%A3%E6%9E%90%E8%BF%87%E7%A8%8B-20200406234324.png?x-oss-process=style/blog_20200322" alt=""></p>
 <p>从打印的信息可以看到：</p>
 <ol>
 <li>DNS解析会先去根域查找，根域的DNS根服务器（这里是d.root-servers.net响应了DNS客户端的请求）告知要去[a-m].gtld-servers.net去查询相关信息</li>
@@ -64,8 +91,8 @@
 <li>可以根据自己的需要在域名提供商申请对应的一级域名，例如我的博客个人域名为：077.ink</li>
 </ul>
 </blockquote>
-<p>在linux中使用<code>dig example.com +trace</code>命令对一级域名解析进行追踪</p>
-<p>![dig命令追踪一级域解析](<a href="http://pic.077.ink/dig命令跟踪" target="_blank" rel="noopener">http://pic.077.ink/dig命令跟踪</a> 二级域解析过程-20200407221142.png?x-oss-process=style/blog_20200322)</p>
+<p>在linux中使用<code>dig example.com +trace</code>命令对二级域名解析进行追踪</p>
+<p><img src="http://pic.077.ink/dig%E5%AF%B9%E4%BA%8C%E7%BA%A7%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E8%B7%9F%E8%B8%AA-image-20200407221124984.png?x-oss-process=style/blog_20200322" alt=""></p>
 <p>从打印信息可以看到，多了以下信息：</p>
 <p><code>example.com.  172800  IN  NS  a.iana-servers.net.</code></p>
 <ol>
@@ -74,24 +101,251 @@
 <li>DNS客户端去请求查询[a-m].iana-servers.net，最终响应请求的是b.iana-servers.net，这个服务器告诉DNS客户端说，example.com对应的IP地址为<code>93.184.216.34</code></li>
 </ol>
 <p>再用ping命令进行验证：</p>
-<p><img src="http://pic.077.ink/ping%E5%91%BD%E4%BB%A4%E9%AA%8C%E8%AF%81-20200407004553.png?x-oss-process=style/blog_20200322" alt="ping命令验证"></p>
+<p><img src="http://pic.077.ink/ping%E5%91%BD%E4%BB%A4%E9%AA%8C%E8%AF%81-20200407004553.png?x-oss-process=style/blog_20200322" alt=""></p>
 <blockquote>
-<p>综上所述：可以知道域名解析的结构为：<code>[二级域名].[一级域名].[顶级域名].(根域名)</code></p>
+<p>综上所述：可以知道域名解析的结构为：<code>[三级域].[二级域].[顶级域].(根域)</code></p>
 </blockquote>
-<h2 id="DNS的历史"><a href="#DNS的历史" class="headerlink" title="DNS的历史"></a>DNS的历史</h2><h3 id="早期-hosts文件解析方式"><a href="#早期-hosts文件解析方式" class="headerlink" title="早期-hosts文件解析方式"></a>早期-hosts文件解析方式</h3><p>在互联网发展的早期，互联网主机数量不多，IP地址难以记住，所以有了对于主机名的需求，希望用“主机名”与服务器通信。这个时候，host文件的文件就暂时解决了这个需求，txt文档里面记录了IP地址与主机名的对应关系。记得小时候去网吧里面玩，如果访问不到某个网站了，网吧的网管就会过来查看下这个host文件是不是没有设置好。</p>
-<p>到了后来，互联网主机越来越多，hosts文件无法支撑庞大的数据对应关系时，就出现了DNS服务器。</p>
-<h3 id="中期-DNS服务器提供hosts文件"><a href="#中期-DNS服务器提供hosts文件" class="headerlink" title="中期-DNS服务器提供hosts文件"></a>中期-DNS服务器提供hosts文件</h3><blockquote>
-<p>IANA：负责互联网地址分配，管理互联网上面主机名与IP地址的对应关系。</p>
+<h2 id="没有一级域的说法"><a href="#没有一级域的说法" class="headerlink" title="没有一级域的说法"></a>没有一级域的说法</h2><p>`举个例子：</p>
+<p><a href="http://www.abc.com" target="_blank" rel="noopener">www.abc.com</a>.    这个是域名应该写成的样子，最后的<code>.</code>是浏览器给自动补齐而不用我们日常写出来的。</p>
+<ol>
+<li>这个根域<code>.</code>它记录了所有的com域，com的位置称之为顶级域。</li>
+<li>abc的位置为二级域，<strong>abc.com共同构成顶级域名</strong></li>
+<li>www的位置为三级域，<strong><a href="http://www.abc.com共同构成二级域名" target="_blank" rel="noopener">www.abc.com共同构成二级域名</a></strong>`</li>
+</ol>
+<h2 id="图解域名结构"><a href="#图解域名结构" class="headerlink" title="图解域名结构"></a>图解域名结构</h2><p><img src="http://pic.077.ink/%E5%9B%A0%E7%89%B9%E7%BD%91%E5%9F%9F%E5%90%8D%E7%BB%93%E6%9E%84-20200407231652.png" alt=""></p>
+<p><img src="http://pic.077.ink/%E5%9B%BD%E9%99%85%E5%9F%9F%E5%90%8D%E7%BB%93%E6%9E%84-20200407231806.png" alt=""></p>
+<p><img src="http://pic.077.ink/%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BB%8B%E7%BB%8D-20200407232124.png" alt=""></p>
+<h1 id="DNS域名解析过程"><a href="#DNS域名解析过程" class="headerlink" title="DNS域名解析过程"></a>DNS域名解析过程</h1><p><img src="http://pic.077.ink/%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90-20200410134844.png" alt=""></p>
+<p>先看一个图解：</p>
+<p><img src="http://pic.077.ink/%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E8%BF%87%E7%A8%8B-20200407231956.png" alt=""></p>
+<h2 id="DNS涉及的角色"><a href="#DNS涉及的角色" class="headerlink" title="DNS涉及的角色"></a>DNS涉及的角色</h2><table>
+<thead>
+<tr>
+<th align="center">角色</th>
+<th align="center">英文全称</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Client</td>
+<td align="center">-</td>
+<td align="left">client 这里单纯的抽象表示一个请求者</td>
+</tr>
+<tr>
+<td align="center">DNS 服务器</td>
+<td align="center">DNS Server</td>
+<td align="left">除了发起请求的 Client，DNS 查询经过的别的节点基本都是 DNS 服务器</td>
+</tr>
+<tr>
+<td align="center">DNS 解析器</td>
+<td align="center">DNS Resolver</td>
+<td align="left">也是DNS服务器的一种</td>
+</tr>
+<tr>
+<td align="center">ISP</td>
+<td align="center">Internet Service Provider</td>
+<td align="left">网络服务提供商，例如三大运营商等</td>
+</tr>
+<tr>
+<td align="center">根域名服务器</td>
+<td align="center">Root Name Server</td>
+<td align="left">全球一共13台，负责返回顶级域（.com等）的权威域名服务器地址</td>
+</tr>
+<tr>
+<td align="center">顶级域名服务器</td>
+<td align="center">Top Level Domain Name Server</td>
+<td align="left">负责返回二级域（example.com等）的权威域名服务器地址</td>
+</tr>
+<tr>
+<td align="center">权威域名服务器</td>
+<td align="center">Authoritative Name Server</td>
+<td align="left">负责返回其域名下的Address记录（A record）及其他记录信息</td>
+</tr>
+</tbody></table>
+<p><img src="http://pic.077.ink/DNS%E6%9F%A5%E8%AF%A2%E5%9B%BE-20200410135043.png" alt=""></p>
+<blockquote>
+<p>DNS解析器（又称为递归DNS解析器，即DNS Resolver）：会响应客户端的递归请求并话费时间跟踪DNS记录，如上图所示。</p>
+<ul>
+<li>它通过发出一系列请求，直到到达请求记录的权威DNS名称服务器为止（或超时或如果找不到记录，则返回错误）来执行此操作</li>
+<li>并不是每次都会对所有层级的DNS 域名服务器发送迭代DNS查询请求<ul>
+<li>第一步通常是会查看自己的缓存里面是否有对应的DNS记录，以此加快DNS解析请求的响应速度</li>
+</ul>
+</li>
+</ul>
 </blockquote>
-<p>早期的实现： 将解析库（文本文件）通过ftp发布出来。世界各地的Unix主机管理员，设定任务计划，定时的获取解析库文件到本地，实时进行更新。</p>
-<p>客户端在有主机名解析请求发生时，通过调用DNS客户端的“共享库”（现在已经成为 glibc 标准库的一部分），去本地的hosts文件获取到解析结果。</p>
-<p>后续，从ftp共享发展到了DNS（中心服务器，使用高可用集群避免服务中断），在本地请求发出后，会优先查询本地的hosts文件，然后才会向DNS服务器进行请求。此时，我们需要的是快速的DNS响应请求，默认使用的是UDP协议（不需要进行三次握手，使用53端口）</p>
-<h3 id="域名解析结果被缓存"><a href="#域名解析结果被缓存" class="headerlink" title="域名解析结果被缓存"></a>域名解析结果被缓存</h3><blockquote>
-<p>并不需要每次向主机名发起请求，都需要向DNS服务器请求进行名称解析</p>
+<p>使用命令<code>host -t ns 077.ink</code>进行查询权威域名服务器：</p>
+<p><img src="http://pic.077.ink/%E5%91%BD%E4%BB%A4%E6%9F%A5%E7%9C%8B%E5%9F%9F%E5%90%8D%E6%9D%83%E5%A8%81%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E5%99%A8-20200409101015867.png" alt=""></p>
+<p>如上图可以看到，我的博客个人域名077.ink使用cloudflare的DNS服务。</p>
+<h2 id="DNS查询方式"><a href="#DNS查询方式" class="headerlink" title="DNS查询方式"></a>DNS查询方式</h2><blockquote>
+<p>递归查询（Recursive query）：A -&gt; B </p>
+<ul>
+<li>逐级查询，逐级返回的则为：A -&gt; B  -&gt; C  -&gt; D </li>
+</ul>
 </blockquote>
-<p>因为IP地址不会经常变动，在<strong>本地DNS客户端第一次得到解析结果后，本地DNS客户端会将解析结果存储在本地，建立缓存。</strong> </p>
-<p>但是，随着互联网迅猛发展，即使有本地缓存等技术减轻DNS服务器的压力，但是渐渐地一台中心服务器已经难以应付这个工作，这是DNS服务器就进入了下一个阶段：将名称实现分布式应用。</p>
-<h3 id="域名解析进入分布式阶段"><a href="#域名解析进入分布式阶段" class="headerlink" title="域名解析进入分布式阶段"></a>域名解析进入分布式阶段</h3><p>DNS在这个时期，采用了<strong>授权管理机制</strong></p>
+<p><img src="http://pic.077.ink/%E9%80%92%E5%BD%92%E6%9F%A5%E8%AF%A2%E5%9B%BE%E8%A7%A3-20200410135310.png" alt=""></p>
+<p>查询说明：</p>
+<ul>
+<li>发生在Client发出一个域名解析请求到Server端</li>
+<li>DNS Server必须返回对应的IP地址，或者返回找不到的报错信息</li>
+</ul>
+<blockquote>
+<p>迭代查询 (Iterative query)：A -&gt; B   A -&gt; C   A -&gt; D</p>
+</blockquote>
+<p>查询说明：</p>
+<ul>
+<li>发生在DNS Server之间，当Client发出域名解析请求之后，DNS Server给予最佳答案</li>
+<li>最佳答案可能是距离最近的顶级域名服务器，也可能是权威域名服务器</li>
+</ul>
+<blockquote>
+<p>非递归查询(Non-recursive query)</p>
+</blockquote>
+<p>查询说明：</p>
+<ul>
+<li>发生在Client和DNS Server之间，DNS Server已经知道答案，直接返回结果<ol>
+<li>DNS Server 本机缓存了对应的IP地址，或者缓存了对应域名的权威服务器地址</li>
+<li>只需要再发一次请求，即可拿到结果返回</li>
+</ol>
+</li>
+</ul>
+<h2 id="DNS解析案例"><a href="#DNS解析案例" class="headerlink" title="DNS解析案例"></a>DNS解析案例</h2><p><img src="http://pic.077.ink/DNS%E6%9F%A5%E8%AF%A2%E6%A1%88%E4%BE%8B%E8%A7%A3%E6%9E%90-20200409105810.png" alt=""></p>
+<p>详细过程：</p>
+<ol>
+<li>jimmy 在浏览器输入地址：<a href="https://077.ink，这个时候，浏览器没有任何缓存，可以理解为使用的是无痕浏览器" target="_blank" rel="noopener">https://077.ink，这个时候，浏览器没有任何缓存，可以理解为使用的是无痕浏览器</a></li>
+<li>这个时候，浏览器作为C端往Router发送了一个DNS查询递归请求，要求路由器必须返回这个域名对应的IP地址</li>
+<li>Router一脸懵逼，啥也不知道，于是向ISP发起对077.ink的递归查询</li>
+<li>ISP的DNS Server在收到请求后，会依次向Root Name Server、TLD Name Server、Authoritative Name Server发起迭代查询请求<ol>
+<li>根域名服务器（Root Name Server）返回.int的顶级域名服务器的IP地址</li>
+<li>顶级域名服务器（TLD Name Server）返回077.ink的权威域名服务器的Ip地址</li>
+<li>权威域名服务器（Authoritative Name Server）返回最终的077.ink对应的IP地址结果</li>
+</ol>
+</li>
+</ol>
+<p>几点说明：</p>
+<ol>
+<li>Client到ISP 之间的DNS查询请求都是递归查询请求</li>
+<li>ISP到各个域名服务器之间的请求均为DNS 迭代查询<ul>
+<li>原因是：递归查询对于服务器的压力要远大于迭代查询<ul>
+<li>为啥呢？</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Router这个角色，一般会使用DHCP协议，ISP会指定一个DNS Server作为Resolver<ul>
+<li>路由器会拦截这个DNS Server，同时分配自己的IP作为Client端的DNS Server</li>
+<li>这个时候，所有的DNS请求都会经过Router</li>
+<li>我们也可以自己指定一个DNS，例如google的8.8.8.8，这样请求就不会经过Router</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>总结，DNS的查询是：递归+迭代，先递归，后迭代进行查询</p>
+</blockquote>
+<h1 id="DNS缓存"><a href="#DNS缓存" class="headerlink" title="DNS缓存"></a>DNS缓存</h1><p>DNS缓存的目的是：将数据临时存储在某个位置，从而提高数据请求的性能和可靠性。</p>
+<p>一般是存储在靠近客户端的位置，以便更快的响应DNS查询，缩短了加载时间并减少了带宽和CPU消耗。</p>
+<blockquote>
+<p>每个有DNS缓存的服务器，都将存储DNS记录，存储时间由TTL（生存时间确定）</p>
+</blockquote>
+<h2 id="缓存类型"><a href="#缓存类型" class="headerlink" title="缓存类型"></a>缓存类型</h2><h3 id="浏览器DNS缓存"><a href="#浏览器DNS缓存" class="headerlink" title="浏览器DNS缓存"></a>浏览器DNS缓存</h3><p>当web浏览器缓存了DNS记录时，因为是在本地，所以浏览器缓存是检测请求记录的第一步。</p>
+<p>在chrome中，可以在地址栏中输入 <code>chrome://net-internals/#dns</code>查看DNS缓存的状态。</p>
+<h3 id="操作系统（OS级）DNS缓存"><a href="#操作系统（OS级）DNS缓存" class="headerlink" title="操作系统（OS级）DNS缓存"></a>操作系统（OS级）DNS缓存</h3><p>查找OS的NDS缓存，是Client发送DNS解析请求后在本地进行查找的第二个地方。</p>
+<p>OS系统内部用于处理此查询过程通常称为“存根解析器”或者DNS客户端。</p>
+<p>步骤：</p>
+<ol>
+<li>当存根解析器从应用程序获取请求时，它首先检查其自己的缓存以查看其是否具有记录</li>
+<li>如果第一步没有记录，则将在本地网络外部发送到ISP内部的DNS递归解析器去查询</li>
+<li>ISP的DNS Resolver接收请求后，也会第一时间查找本地缓存</li>
+</ol>
+<h1 id="DNS记录类型"><a href="#DNS记录类型" class="headerlink" title="DNS记录类型"></a>DNS记录类型</h1><p>DNS服务器创建DNS记录以提供有关域或主机名（尤其是其当前IP地址）的重要信息。最常见的DNS记录类型为：</p>
+<table>
+<thead>
+<tr>
+<th align="center">DNS记录类型</th>
+<th>其他</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">A记录</td>
+<td>存储主机名及其对应的IPv4地址</td>
+<td>地址映射记录-<strong>Address Mapping record</strong></td>
+</tr>
+<tr>
+<td align="center">AAAA记录</td>
+<td>存储主机名及其对应的IPv6地址</td>
+<td>IPv6地址映射记录-<strong>IP Version 6 Address record</strong></td>
+</tr>
+<tr>
+<td align="center">CNAME记录</td>
+<td>用于将一个主机名别名为另一个主机名。当DNS客户端请求包含指向另一个主机名的CNAME的记录时，将使用新的主机名重复DNS解析过程</td>
+<td>规范名称记录-<strong>Canonical Name record</strong></td>
+</tr>
+<tr>
+<td align="center">MX记录</td>
+<td>指定域的SMTP电子邮件服务器，用于将传出电子邮件路由到电子邮件服务器</td>
+<td>邮件交换器记录-<strong>Mail exchanger record</strong></td>
+</tr>
+<tr>
+<td align="center">NS记录</td>
+<td>指定将DNS区域（例如“ example.com”）委派给特定的权威名称服务器</td>
+<td>名称服务器记录-<strong>Name Server records</strong></td>
+</tr>
+<tr>
+<td align="center">PTR记录</td>
+<td>允许DNS解析器提供IP地址并接收主机名（反向DNS查找）</td>
+<td>反向查找指针记录-<strong>Reverse-lookup Pointer records</strong></td>
+</tr>
+<tr>
+<td align="center">CERT记录</td>
+<td>存储加密证书-PKIX，SPKI，PGP等</td>
+<td>证书记录-<strong>Certificate record</strong></td>
+</tr>
+<tr>
+<td align="center">SRV记录</td>
+<td>服务位置记录，类似于MX，但用于其他通信协议</td>
+<td>服务位置记录-<strong>Service Location</strong></td>
+</tr>
+<tr>
+<td align="center">TXT记录</td>
+<td>通常携带机器可读的数据，例如机会加密，发送者策略框架，DKIM，DMARC等，一般用于验证域名拥有者身份</td>
+<td>文本记录-<strong>Text Record</strong></td>
+</tr>
+<tr>
+<td align="center">SOA记录</td>
+<td>该记录显示在DNS区域文件的开头，并指示当前DNS区域的权威名称服务器，域管理员的联系详细信息，域序列号以及有关DNS信息频率的信息该区域应刷新</td>
+<td>授权开始记录-<strong>Start of Authority</strong></td>
+</tr>
+</tbody></table>
+<h1 id="设置你的DNS"><a href="#设置你的DNS" class="headerlink" title="设置你的DNS"></a>设置你的DNS</h1><h2 id="什么是1-1-1-1"><a href="#什么是1-1-1-1" class="headerlink" title="什么是1.1.1.1"></a>什么是1.1.1.1</h2><p><a href="https://1.1.1.1/" target="_blank" rel="noopener">1.1.1.1</a>是一种快速而私密的浏览Internet的方式。它是一个公共<a href="https://www.cloudflare.com/learning/dns/dns-server-types#recursive-resolver" target="_blank" rel="noopener">DNS解析器</a>，但与大多数DNS解析器不同，1.1.1.1并未将用户数据出售给广告商。1.1.1.1的实现使其成为目前最快的解析器。</p>
+<h2 id="为什么要用1-1-1-1"><a href="#为什么要用1-1-1-1" class="headerlink" title="为什么要用1.1.1.1"></a>为什么要用1.1.1.1</h2><p><img src="http://pic.077.ink/DNS%E8%8E%B7%E5%8F%96%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF%E5%9B%BE%E7%A4%BA-20200410135505.png" alt=""></p>
+<p>ISP通常有30%-50%的概率会有隐秘的各种劫持动作，不要问我怎么知道的…</p>
+<p><a href="https://bbs.pediy.com/thread-258654.htm" target="_blank" rel="noopener">运营商https劫持案例</a></p>
+<p>使用第三方DNS解析器，主要原因是：</p>
+<ol>
+<li>安全性</li>
+<li>性能</li>
+<li>ISP并不总是在其DNS上使用强<a href="https://www.cloudflare.com/learning/ssl/what-is-encryption/" target="_blank" rel="noopener">加密</a>或支持<a href="https://www.cloudflare.com/learning/dns/dns-security/" target="_blank" rel="noopener">DNSSEC</a>这将导致ISP的DNS解析器容易出现数据泄露以及让用户面临中间人攻击等威胁</li>
+<li>ISP会通过DNS记录来跟踪用户的活动和行为，例如2020年疫情期间，三大运营商的个人足迹查询功能</li>
+<li>ISP的DNS解析器通常速度不如第三方DNS解析器，容易过载，在高峰时期，用户体验较差</li>
+<li>某些情况下，攻击者可以通过操作让DNS解析器过载，从而导致DDOS攻击产生</li>
+</ol>
+<p>当然不仅仅只有1.1.1.1可以用，通常可以推荐使用以下DNS：</p>
+<p><img src="http://pic.077.ink/%E6%89%8B%E6%9C%BADNS%E8%AE%BE%E7%BD%AE%E6%8E%A8%E8%8D%90-image-20200409181408594.png?x-oss-process=style/blog_20200322" alt=""></p>
+<blockquote>
+<p>1.1.1.1和1.0.0.1是cloudflare推荐使用的，我放在第一位，据说全球有1000+台Cloudfare的服务器</p>
+<p>208.67.x.x是Cisco 的OpenDNS</p>
+<p>8.8.8.8 是Google 的 Public DNS</p>
+<p>114.114.114.114 是 我们熟悉的第三方DNS</p>
+</blockquote>
+<p>DNS请求解析速度如下图，该测试由cloudflare提供：</p>
+<p><img src="http://pic.077.ink/%E5%90%84%E5%A4%A7DNS%E8%A7%A3%E6%9E%90%E9%80%9F%E5%BA%A6%E5%AF%B9%E6%AF%94-20200410135844.png" alt="DNS速度比较"></p>
+<h1 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h1><p><a href="[https://zh.wikipedia.org/wiki/%E5%9F%9F%E5%90%8D%E7%B3%BB%E7%BB%9F](https://zh.wikipedia.org/wiki/域名系统)">维基百科-DNS</a></p>
+<p><a href="https://www.youtube.com/watch?v=1ZBqfuFdBCU" target="_blank" rel="noopener">油管视频解析dns</a></p>
+<p><a href="https://www.ruanyifeng.com/blog/2016/06/dns.html" target="_blank" rel="noopener">阮一峰日志-DNS原理入门</a></p>
+<p><a href="https://juejin.im/post/5d3c0a4fe51d4510b71da6e7" target="_blank" rel="noopener">掘金参考文章</a></p>
+<p><a href="https://www.cloudflare.com/learning/dns/what-is-dns/" target="_blank" rel="noopener">Cloudflare-DNS</a></p>
+<p><a href="https://www.cloudflare.com/learning/dns/what-is-1.1.1.1/" target="_blank" rel="noopener">1.1.1.1公共DNS</a></p>
+<p><a href="https://www.cloudflare.com/learning/dns/dns-records/" target="_blank" rel="noopener">Cloudflare-DNS记录</a></p>
+<h1 id="To-Be-continue"><a href="#To-Be-continue" class="headerlink" title="To Be continue"></a>To Be continue</h1><p>准备总结一下，DNS安全相关的内容，下一篇文章见，记住森林的暗处，到处都是带枪的猎人。</p>
 ]]></content>
       <categories>
         <category>技术</category>
