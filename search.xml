@@ -382,7 +382,7 @@
 </blockquote>
 <h1 id="为什么要上CDN"><a href="#为什么要上CDN" class="headerlink" title="为什么要上CDN"></a>为什么要上CDN</h1><p>先来一个上了Cloudfare CDN后的效果图吧：</p>
 <p><img src="http://pic.077.ink/image-%E4%B8%8ACDN%E5%90%8E%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6%E6%B5%8B%E8%AF%95-20200331094752916.png?x-oss-process=style/blog_20200322" alt="上CDN后访问速度测试"></p>
-<p>上CDN之前的，这个雄鸡可是红色一大片的，现在已经非常满意了，至少还有绿色，你说是吧？</p>
+<p>上CDN之前的，这个雄鸡可是红色一大片的，现在已经非常满意了，至少还有绿色，你说是吧？But，文末有惊喜，事实可能并不像你想的那么美好！</p>
 <p>在上CDN之前，使用的是Cloudfare的自带解析，如下图红框，这四个IP最近因为劫持事件出现在网上频率较高，是GithubPages服务器的源IP</p>
 <p><img src="http://pic.077.ink/image-CDN%E9%85%8D%E7%BD%AE%E5%89%8Ddig-20200328234354129.png?x-oss-process=style/blog_20200322" alt="CDN配置前dig"></p>
 <p>在上了CDN之后呢，如下图：</p>
@@ -409,10 +409,15 @@
 <blockquote>
 <p>一个字，国内慢，国外也慢，不推荐！！！</p>
 </blockquote>
-<h1 id="终极优化方案"><a href="#终极优化方案" class="headerlink" title="终极优化方案"></a>终极优化方案</h1><p>直接看配置吧，一目了然，可以参考我的配置，速度是杠杠的，特别是上了CDN之后，国内外可以说是秒开！</p>
-<p><img src="http://pic.077.ink/image-CloudfareCDN%E9%85%8D%E7%BD%AE-20200331103255709.png?x-oss-process=style/blog_20200322" alt="CloudfareCDN-终极解决方案"></p>
+<h1 id="终极实用配置"><a href="#终极实用配置" class="headerlink" title="终极实用配置"></a>终极实用配置</h1><p>直接看配置吧，一目了然，可以参考我的配置，CDN上了后，据telegram热心网友反馈，其实Cloudflare 免费CDN是减速的，虽然依然比国内的大厂体验要好，测试速度本文开头，全是黄色的……</p>
+<p><img src="http://pic.077.ink/image-CloudfareCDN%E9%85%8D%E7%BD%AE-20200331103255709.png?x-oss-process=style/blog_20200322" alt=""></p>
 <blockquote>
-<p>一个字：爽爽爽！！！</p>
+<p>一个字：不是太爽……</p>
+</blockquote>
+<p>我在2020年4月13日开始，将Cloudflare的CDN配置全部改为“DNS only”，即仅使用DNS功能，测试速度如下：</p>
+<p><img src="http://pic.077.ink/%E7%BB%88%E6%9E%81%E5%AE%9E%E7%94%A8blogCDN%E6%96%B9%E6%A1%88%E6%B5%8B%E8%AF%95%E9%80%9F%E5%BA%A6%E7%BB%93%E6%9E%9C-20200413095936.png?x-oss-process=style/blog_20200322" alt=""></p>
+<blockquote>
+<p>一个字：爽！！！</p>
 </blockquote>
 ]]></content>
       <categories>
