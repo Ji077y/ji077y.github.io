@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://077.ink/about/index.html</loc>
+    
+    <lastmod>2020-04-17T03:19:09.325Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://077.ink/archives/3a73381c.html</loc>
     
     <lastmod>2020-04-13T02:06:30.801Z</lastmod>
@@ -173,13 +180,6 @@
     <loc>https://077.ink/tags/index.html</loc>
     
     <lastmod>2020-02-28T21:41:57.496Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://077.ink/about/index.html</loc>
-    
-    <lastmod>2020-02-28T21:39:49.146Z</lastmod>
     
   </url>
   
