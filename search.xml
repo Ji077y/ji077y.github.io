@@ -1,6 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>网络带宽换算Mbps与MBps</title>
+    <url>/archives/ae265469.html</url>
+    <content><![CDATA[<p><img src="http://pic.077.ink/%E7%BD%91%E7%BB%9C%E9%80%9F%E7%8E%87%E6%8D%A2%E7%AE%97%E5%B0%81%E9%9D%A2.jpg" alt=""></p>
+<a id="more"></a>
+
+
+<h1 id="我家网速1000M"><a href="#我家网速1000M" class="headerlink" title="我家网速1000M"></a>我家网速1000M</h1><p>你家网速千兆光纤入户？那么你那么牛逼，你来介绍下你家的这个千兆是怎么算的咯。</p>
+<blockquote>
+<p> 800Mbps=100MBps     ps简化为/s，所以800Mb/s=100MB/s=100M/s(我们通常口里说的速率单位)，考虑实际速率损耗，这个数值只能保持在几十M/s</p>
+</blockquote>
+<ul>
+<li>Mbps=Million bits per second<ul>
+<li>Mbps=Mbit/s=Mb/s</li>
+<li>每秒传输的位的数量</li>
+</ul>
+</li>
+<li>MBps=Million Byte per second，<strong>这个是我们常说的下载xxM/s</strong><ul>
+<li>MBps=MByte/s=MB/s</li>
+<li>每秒传输的字节数量</li>
+</ul>
+</li>
+</ul>
+<p>为啥是8倍的关系呢？因为b=bit，B=Byte，而1Byte=8bit，所以800Mbit=100MByte</p>
+<blockquote>
+<ul>
+<li><p>b全称为bit，存放一位二进制数，即0或者1，代表为位，是最小的存储单位</p>
+</li>
+<li><p>B全称为Byte，代表字节，8个二进制位=1个字节，即为1Byte=8bit，Byte是最常用的数据量常用单位</p>
+</li>
+</ul>
+</blockquote>
+<h1 id="国际电工委员会IEC"><a href="#国际电工委员会IEC" class="headerlink" title="国际电工委员会IEC"></a>国际电工委员会IEC</h1><p>IEC规定：</p>
+<blockquote>
+<p>1Byte=8bits</p>
+</blockquote>
+<blockquote>
+<p>1KB=1024Bytes，1Kb=1024bits</p>
+</blockquote>
+<blockquote>
+<p>1MB=1024KB=1024*1024Byte=1048576Bytes</p>
+</blockquote>
+<blockquote>
+<p>1Mb=1024kb=1024*1024bit=1048576bits</p>
+</blockquote>
+<h1 id="So-装宽带的时候，问清楚是大B还是小b"><a href="#So-装宽带的时候，问清楚是大B还是小b" class="headerlink" title="So 装宽带的时候，问清楚是大B还是小b"></a>So 装宽带的时候，问清楚是大B还是小b</h1><p>记住这个小节的副标题，装x必备知识~</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>网络基础</category>
+      </categories>
+      <tags>
+        <tag>网速换算</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>DNS解析与实现探究</title>
     <url>/archives/3fc41e5c.html</url>
     <content><![CDATA[<p><img src="http://pic.077.ink/DNS%E8%A7%A3%E6%9E%90%E4%B8%8E%E5%AE%9E%E7%8E%B0%E5%B0%81%E9%9D%A21.jpg" alt=""></p>
