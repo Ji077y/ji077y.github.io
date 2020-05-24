@@ -1,6 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Git分布式版本管理系统教程</title>
+    <url>/archives/6805f44d.html</url>
+    <content><![CDATA[<p><img src="http://pic.077.ink/git%E6%95%99%E7%A8%8B%E5%B0%81%E9%9D%A2.jpg" alt=""></p>
+<a id="more"></a>
+<h1 id="0x0-入门"><a href="#0x0-入门" class="headerlink" title="0x0 入门"></a>0x0 入门</h1><p>github是给git服务的，提供了更多的工具</p>
+<p>提供多分支开发的服务</p>
+<h1 id="0x1-Git基础概念"><a href="#0x1-Git基础概念" class="headerlink" title="0x1 Git基础概念"></a>0x1 Git基础概念</h1><ol>
+<li>本地工作文件夹</li>
+<li>Git索引区（stage）：提交到本地库之前的代码，需要提交到Git索引区，即先stage，再提交到本地库</li>
+<li>Git库<ul>
+<li>local：本地库</li>
+<li>remote：远程库（服务器端）</li>
+</ul>
+</li>
+</ol>
+<h1 id="0x2-代码开发流程"><a href="#0x2-代码开发流程" class="headerlink" title="0x2 代码开发流程"></a>0x2 代码开发流程</h1><ol>
+<li>系统开发，编写代码</li>
+<li>提交代码到Git本地库，例如自己白天提交了3次到本地库</li>
+<li>晚上一起，将这三次提交到Git远程库，分享给团队其他的人</li>
+<li>第二天起来到公司，为了获取到昨晚加班同事提交的最新代码，要从远程库中拉取一份最新的代码到本地</li>
+<li>在最新的代码基础上继续编写代码</li>
+<li>重复第2步以及以后的步骤直到开发完成</li>
+</ol>
+<h1 id="0x3-Git使用前"><a href="#0x3-Git使用前" class="headerlink" title="0x3 Git使用前"></a>0x3 Git使用前</h1><ul>
+<li>在文件夹中建立一个Git库<ul>
+<li>git init<ul>
+<li>该命令会在当前文件夹中初始化一个git库，当前文件夹中的所有文件都可以进行版本管理</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>设置基础信息<ul>
+<li>git config -l   (打印查看配置信息)</li>
+<li>git config –global user.name “xxx”</li>
+<li>git config –global user.email “<a href="mailto:xxx@gmail.com">xxx@gmail.com</a>“</li>
+<li>git config –global color.ui true (mac版git可用，用于高亮显示)</li>
+<li>git config -l (再次打印查看配置信息)</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>帮助信息<ul>
+<li>git config –help</li>
+<li>git help config</li>
+<li>git help commit</li>
+<li>git help branch</li>
+</ul>
+</li>
+</ul>
+<h1 id="0x4-自己测试使用git"><a href="#0x4-自己测试使用git" class="headerlink" title="0x4 自己测试使用git"></a>0x4 自己测试使用git</h1><p>以下按顺序执行</p>
+<ol>
+<li>working：代表你当前真正处理files</li>
+<li>staging：代表你准备把files推向remote repository</li>
+<li>repository：推送到仓库中保存</li>
+</ol>
+<p>使用以下命令，进行初始化</p>
+<blockquote>
+<p>git config –global user.name “xxx”</p>
+<p>git config –global user.gmail “xxx”</p>
+</blockquote>
+<p>使用以下命令，生成测试文件</p>
+<blockquote>
+<p>vi index.html</p>
+</blockquote>
+<p><img src="http://pic.077.ink/git%E7%94%9F%E6%88%90%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6.png?x-oss-process=style/blog_20200322" alt=""></p>
+<p>使用以下命令进行状态检查</p>
+<blockquote>
+<p>git status</p>
+</blockquote>
+<p><img src="http://pic.077.ink/git%E6%A3%80%E6%9F%A5%E6%96%87%E4%BB%B6%E7%8A%B6%E6%80%81.png?x-oss-process=style/blog_20200322" alt=""></p>
+<p>图中显示红色的“index.html”指的是，这个文件还没有被跟踪，处于untracked（未跟踪）状态</p>
+<p>使用以下命令进行文件跟踪</p>
+<blockquote>
+<p>git add . (表示文件夹中的所有文件均跟踪)</p>
+</blockquote>
+<blockquote>
+<p>git add index.html  (可指定文件名称)</p>
+</blockquote>
+<p><img src="http://pic.077.ink/gitadd%E5%90%8Estatus.png?x-oss-process=style/blog_20200322" alt=""></p>
+<p>进行首次提交：</p>
+<p><img src="http://pic.077.ink/git%E9%A6%96%E6%AC%A1commit.png?x-oss-process=style/blog_20200322" alt=""></p>
+<h1 id="0x5-提交出错"><a href="#0x5-提交出错" class="headerlink" title="0x5 提交出错"></a>0x5 提交出错</h1><p><a href="https://blog.csdn.net/Ever69/article/details/97565768?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase" target="_blank" rel="noopener">failed to push some refs to错误解决方案</a></p>
+<blockquote>
+<p>回顾整个push过程</p>
+</blockquote>
+<p>一般新手想把自己本地的某个项目关联到github上的仓库（repository）并push代码的流程如下：</p>
+<ol>
+<li>本地项目的目录</li>
+<li>在github上面新建一个repository</li>
+<li>本地关联github上新建的repository</li>
+<li>本地push最新版本的代码到repository</li>
+</ol>
+<blockquote>
+<p>出错点</p>
+</blockquote>
+<p><img src="http://pic.077.ink/git%E4%BB%A3%E7%A0%81push%E6%8A%A5%E9%94%99%E6%BC%94%E7%A4%BA1.png?x-oss-process=style/blog_20200322" alt=""></p>
+<p>这个’Initialize this repository with a README’是很多人在新建repository的时候都会勾选的。</p>
+<ul>
+<li>勾选了这个选项后，当点击创建仓库的时候，会帮助我们进行一次初始提交</li>
+<li>于是在新建仓库里面，默认的就会有README.md和.gitignore（本地同步后看不到，需要打开隐藏文件才能显示）</li>
+<li>在以上前提下，我们使用命令’git push -u origin master’就会出现以下报错</li>
+</ul>
+<p><img src="http://pic.077.ink/git%E6%8E%A8%E9%80%81%E6%8A%A5%E9%94%99%E6%BC%94%E7%A4%BA2.png?x-oss-process=style/blog_20200322" alt=""></p>
+<blockquote>
+<p>为什么会出错呢？</p>
+</blockquote>
+<p>我们在本地执行命令push的时候，在那个时间点，本地和github仓库都是有内容的，但是这两个内容并没有联系。所以，在push（推送）或者pull（拉取）的时候，都会出现没有被跟踪的内容。</p>
+<blockquote>
+<p>当出现未被跟踪内容的时候，在执行拉取或者推送操作，就会出问题！</p>
+</blockquote>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>会面临三种情况</p>
+<ol>
+<li>一种是本地存在大量修改过的代码，如果执行解决方案的提议，将github同步到本地，那么会不会出现本来要push的代码全没了的情况？<a href="https://blog.csdn.net/MBuger/article/details/70197532" target="_blank" rel="noopener">参考评论区</a></li>
+</ol>
+<ol start="2">
+<li>另一个情况，本地没有代码，那么就不用担心，直接用’git pull –rebase origin master’然后’git push -u origin master’解决。</li>
+</ol>
+<ol start="3">
+<li>新建的时候，不要勾选’Initialize this repository with a README’，<a href="https://blog.csdn.net/Ever69/article/details/97565768?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase" target="_blank" rel="noopener">参考解决案例</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>网络带宽换算Mbps与MBps</title>
     <url>/archives/ae265469.html</url>
     <content><![CDATA[<p><img src="http://pic.077.ink/%E7%BD%91%E7%BB%9C%E9%80%9F%E7%8E%87%E6%8D%A2%E7%AE%97%E5%B0%81%E9%9D%A2.jpg" alt=""></p>
@@ -1118,79 +1250,6 @@
       <tags>
         <tag>Markdown</tag>
         <tag>技术</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git分布式管理系统学习</title>
-    <url>/archives/cd181654.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center"><p>Coding Change World </p>
-</blockquote>
-
-<p><a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">廖雪峰老师的Git教程</a></p>
-<h2 id="Git出现的历史原因"><a href="#Git出现的历史原因" class="headerlink" title="Git出现的历史原因"></a>Git出现的历史原因</h2><h3 id="Git是什么"><a href="#Git是什么" class="headerlink" title="Git是什么"></a>Git是什么</h3><blockquote>
-<p>目前世界上最先进的<strong>分布式版本控制系统</strong></p>
-</blockquote>
-<p>它会非常详细的记住文件的修改信息，例如被修改文件名、修改用户、说明还有修改日期，像下面这张图一样</p>
-<p><img src="http://pic.077.ink/image-20200325225144743diff0.png?image/auto-orient,1/quality,q_90/watermark,text_5Yeg57Gz5aSn5aSn,type_ZmFuZ3poZW5na2FpdGk,color_091b4b,size_28,shadow_38,g_se,x_10,y_10" alt="示例"></p>
-<h3 id="版本控制系统的历史"><a href="#版本控制系统的历史" class="headerlink" title="版本控制系统的历史"></a>版本控制系统的历史</h3><p>在遥远的1991年，我出生的那年，很荣幸啊，Linus创建了开源的Linux系统，目前已经成长为最大的服务器系统软件。</p>
-<p>Linus是怎么管理这个开源的系统呢？毕竟这个系统是全世界各地的程序员一起贡献的代码。</p>
-<p>在2002年以前，世界各地的大佬都是把源代码文件通过<strong>diff</strong>的方式发送给Linus，然后由Linus通过手工方式合并代码！真是热爱代码的Linus啊，我是佩服的五体投地的。</p>
-<h4 id="diff"><a href="#diff" class="headerlink" title="diff"></a>diff</h4><p><a href="http://www.ruanyifeng.com/blog/2012/08/how_to_read_diff.html" target="_blank" rel="noopener">点我读懂diff方式</a></p>
-<blockquote>
-<p>diff是UNIX系统的一个很重要的<strong>工具程序</strong></p>
-<ul>
-<li>用来比较两个文件文本的差异，是代码版本管理的基石之一</li>
-</ul>
-</blockquote>
-<p>通过键入命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ diff &lt;变动前的文件&gt; &lt;变动后的文件&gt;</span><br></pre></td></tr></table></figure>
-
-<p>diff就会告诉你，这两个文件有什么不同，显示大概如下：</p>
-<p><img src="http://pic.077.ink/image-20200325231306613diff1.png?image/auto-orient,1/quality,q_90/watermark,text_5Yeg57Gz5aSn5aSn,type_ZmFuZ3poZW5na2FpdGk,color_091b4b,size_28,shadow_38,g_se,x_10,y_10" alt="diff回显"></p>
-<p>diff的三种格式，为啥有三种呢？历史的巨轮总是推着技术前进的，有需求就有技术去实现，那么diff也是一个道理，那么diff在进化的道路上的三个格式如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">　　* 正常格式（normal diff）</span><br><span class="line"></span><br><span class="line">　　* 上下文格式（context diff）</span><br><span class="line"></span><br><span class="line">　　* 合并格式（unified diff）</span><br></pre></td></tr></table></figure>
-
-<p>文件f1</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">a</span><br><span class="line">a</span><br><span class="line">a</span><br><span class="line">a</span><br><span class="line">a</span><br><span class="line">a</span><br><span class="line">a</span><br></pre></td></tr></table></figure>
-
-<p>文件f2</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">a</span><br><span class="line">a</span><br><span class="line">a</span><br><span class="line">b</span><br><span class="line">a</span><br><span class="line">a</span><br><span class="line">a</span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="正常格式"><a href="#正常格式" class="headerlink" title="正常格式"></a>正常格式</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ diff f1 f2</span><br></pre></td></tr></table></figure>
-
-<p>此时回显为：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">　　4c4    &#x2F;&#x2F; c是change的意思，f1的第四行改变</span><br><span class="line">　　&lt; a    &#x2F;&#x2F; &lt; 是去除该行的意思</span><br><span class="line">　　---    &#x2F;&#x2F; 分割线</span><br><span class="line">　　&gt; b    &#x2F;&#x2F; &gt; 是增加了该行</span><br></pre></td></tr></table></figure>
-
-
-
-<blockquote>
-<p>劣势：如果文件非常大，这个时候，看得人可是会晕掉的！so，这个设计被pass掉</p>
-</blockquote>
-<h5 id="上下文格式"><a href="#上下文格式" class="headerlink" title="上下文格式"></a>上下文格式</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ diff -c f1 f2</span><br></pre></td></tr></table></figure>
-
-<p>此时回显为</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">　　*** f1 2012-08-29 16:45:41.000000000 +0800  &#x2F;&#x2F; 基本信息</span><br><span class="line">　　--- f2 2012-08-29 16:45:51.000000000 +0800  &#x2F;&#x2F; 基本信息</span><br><span class="line">　　***************                             &#x2F;&#x2F; 分割线</span><br><span class="line">　　*** 1,7 ****                                &#x2F;&#x2F; 表示从第一行开始连续7行</span><br><span class="line">　　 a</span><br><span class="line">　　 a</span><br><span class="line">　　 a</span><br><span class="line">　　!a  &#x2F;&#x2F; ！表示该行有变动</span><br><span class="line">　　 a</span><br><span class="line">　　 a</span><br><span class="line">　　 a</span><br><span class="line">　　--- 1,7 ----</span><br><span class="line">　　 a</span><br><span class="line">　　 a</span><br><span class="line">　　 a</span><br><span class="line">　　!b  &#x2F;&#x2F; ！表示该行有变动且显示变动后的内容</span><br><span class="line">　　 a</span><br><span class="line">　　 a</span><br><span class="line">　　 a</span><br></pre></td></tr></table></figure>
-
-
-
-<blockquote>
-<p>同样的，这个设计回显，也是会因为文件太大而造成阅读非常困难，so，这个设计也被pass掉</p>
-</blockquote>
-<h5 id="合并格式"><a href="#合并格式" class="headerlink" title="合并格式"></a>合并格式</h5><blockquote>
-<p>在当时的时代背景下，已经有CVS和SVN的版本控制系统，为啥Linus大佬不用呢？？？</p>
-<ul>
-<li>Linus坚定地反对CVS和SVN，这些集中式的版本控制系统不但速度慢，而且<strong>必须联网</strong>才能使用！！！</li>
-</ul>
-</blockquote>
-]]></content>
-      <categories>
-        <category>技术</category>
-        <category>Git</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
       </tags>
   </entry>
   <entry>

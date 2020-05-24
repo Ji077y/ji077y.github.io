@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://077.ink/"/>
-  <updated>2020-04-18T08:06:01.726Z</updated>
+  <updated>2020-05-20T03:30:35.821Z</updated>
   <id>https://077.ink/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git分布式版本管理系统教程</title>
+    <link href="https://077.ink/archives/6805f44d.html"/>
+    <id>https://077.ink/archives/6805f44d.html</id>
+    <published>2020-05-20T03:20:35.000Z</published>
+    <updated>2020-05-20T03:30:35.821Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://pic.077.ink/git%E6%95%99%E7%A8%8B%E5%B0%81%E9%9D%A2.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://077.ink/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="git" scheme="https://077.ink/categories/%E6%8A%80%E6%9C%AF/git/"/>
+    
+    
+      <category term="git" scheme="https://077.ink/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>网络带宽换算Mbps与MBps</title>
@@ -363,38 +386,6 @@
       <category term="Markdown" scheme="https://077.ink/tags/Markdown/"/>
     
       <category term="技术" scheme="https://077.ink/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git分布式管理系统学习</title>
-    <link href="https://077.ink/archives/cd181654.html"/>
-    <id>https://077.ink/archives/cd181654.html</id>
-    <published>2020-02-07T08:48:20.000Z</published>
-    <updated>2020-03-25T16:27:05.247Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;p&gt;Coding Change World &lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="技术" scheme="https://077.ink/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-      <category term="Git" scheme="https://077.ink/categories/%E6%8A%80%E6%9C%AF/Git/"/>
-    
-    
-      <category term="Git" scheme="https://077.ink/tags/Git/"/>
     
   </entry>
   
