@@ -54,7 +54,7 @@
 <meta property="og:image" content="http://pic.077.ink/git%E4%BB%A3%E7%A0%81push%E6%8A%A5%E9%94%99%E6%BC%94%E7%A4%BA1.png?x-oss-process=style/blog_20200322">
 <meta property="og:image" content="http://pic.077.ink/git%E6%8E%A8%E9%80%81%E6%8A%A5%E9%94%99%E6%BC%94%E7%A4%BA2.png?x-oss-process=style/blog_20200322">
 <meta property="article:published_time" content="2020-05-20T03:20:35.000Z">
-<meta property="article:modified_time" content="2020-05-28T03:32:34.056Z">
+<meta property="article:modified_time" content="2020-06-15T11:00:54.386Z">
 <meta property="article:author" content="Jimmy Huang">
 <meta property="article:tag" content="git">
 <meta name="twitter:card" content="summary">
@@ -272,7 +272,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-28 11:32:34" itemprop="dateModified" datetime="2020-05-28T11:32:34+08:00">2020-05-28</time>
+                <time title="修改时间：2020-06-15 19:00:54" itemprop="dateModified" datetime="2020-06-15T19:00:54+08:00">2020-06-15</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -337,13 +337,13 @@
         <p><img src="http://pic.077.ink/git%E6%95%99%E7%A8%8B%E5%B0%81%E9%9D%A2.jpg" alt=""></p>
 <a id="more"></a>
 
-<h1 id="0x0-什么是Git-amp-Github"><a href="#0x0-什么是Git-amp-Github" class="headerlink" title="0x0 什么是Git&amp;Github"></a>0x0 什么是Git&amp;Github</h1><blockquote>
+<h1 id="0x00-什么是Git-amp-Github"><a href="#0x00-什么是Git-amp-Github" class="headerlink" title="0x00 什么是Git&amp;Github"></a>0x00 什么是Git&amp;Github</h1><blockquote>
 <p>Git是目前世界上最先进的分布式版本控制系统</p>
 </blockquote>
 <blockquote>
 <p>github是给git服务的，提供了更多的工具，提供多分支开发的服务</p>
 </blockquote>
-<h1 id="SVN与Git的区别"><a href="#SVN与Git的区别" class="headerlink" title="SVN与Git的区别"></a>SVN与Git的区别</h1><blockquote>
+<h2 id="SVN与Git的区别"><a href="#SVN与Git的区别" class="headerlink" title="SVN与Git的区别"></a>SVN与Git的区别</h2><blockquote>
 <p>SVN：集中式版本控制系统，版本库放在中央服务器</p>
 <ul>
 <li><p>必须联网才能工作，适合局域网开发，带宽够大，速度够快即可</p>
@@ -367,7 +367,7 @@
 </li>
 </ul>
 </blockquote>
-<h1 id="0x1-Git基础概念"><a href="#0x1-Git基础概念" class="headerlink" title="0x1 Git基础概念"></a>0x1 Git基础概念</h1><p>Git工作流程/原理如下图所示：</p>
+<h1 id="0x01-Git基础概念"><a href="#0x01-Git基础概念" class="headerlink" title="0x01 Git基础概念"></a>0x01 Git基础概念</h1><p>Git工作流程/原理如下图所示：</p>
 <p><img src="http://pic.077.ink/git%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86.png" alt=""></p>
 <ul>
 <li>Workspce：工作区</li>
@@ -375,7 +375,7 @@
 <li>Repository：仓库区（本地仓库）</li>
 <li>Remote：远程仓库</li>
 </ul>
-<h1 id="0x2-代码开发流程"><a href="#0x2-代码开发流程" class="headerlink" title="0x2 代码开发流程"></a>0x2 代码开发流程</h1><ol>
+<h1 id="0x02-代码开发流程"><a href="#0x02-代码开发流程" class="headerlink" title="0x02 代码开发流程"></a>0x02 代码开发流程</h1><ol>
 <li>系统开发，编写代码</li>
 <li>提交代码到Git本地库，例如自己白天提交了3次到本地库</li>
 <li>晚上一起，将这三次提交到Git远程库，分享给团队其他的人</li>
@@ -383,7 +383,7 @@
 <li>在最新的代码基础上继续编写代码</li>
 <li>重复第2步以及以后的步骤直到开发完成</li>
 </ol>
-<h1 id="0x3-Git使用前"><a href="#0x3-Git使用前" class="headerlink" title="0x3 Git使用前"></a>0x3 Git使用前</h1><ul>
+<h1 id="0x03-Git使用前"><a href="#0x03-Git使用前" class="headerlink" title="0x03 Git使用前"></a>0x03 Git使用前</h1><ul>
 <li>在文件夹中建立一个Git库<ul>
 <li>git init<ul>
 <li>该命令会在当前文件夹中初始化一个git库，当前文件夹中的所有文件都可以进行版本管理</li>
@@ -420,7 +420,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="0x4-开始玩Git"><a href="#0x4-开始玩Git" class="headerlink" title="0x4 开始玩Git"></a>0x4 开始玩Git</h1><h2 id="下载与安装"><a href="#下载与安装" class="headerlink" title="下载与安装"></a>下载与安装</h2><p><a href="https://git-scm.com/" target="_blank" rel="noopener">下载安装Git</a></p>
+<h1 id="0x04-开始玩Git"><a href="#0x04-开始玩Git" class="headerlink" title="0x04 开始玩Git"></a>0x04 开始玩Git</h1><h2 id="下载与安装"><a href="#下载与安装" class="headerlink" title="下载与安装"></a>下载与安装</h2><p><a href="https://git-scm.com/" target="_blank" rel="noopener">下载安装Git</a></p>
 <p><img src="http://pic.077.ink/git%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%851.png?x-oss-process=style/blog_20200322" alt=""></p>
 <p>安装主流使用的操作系统分为Windows和Mac，这里主要是针对Windows进行演示操作，Mac系统的操作是一样的。</p>
 <p>安装直接执行默认安装即可，安装完成后，双击windows桌面生成的UI图标即可打开。</p>
@@ -533,7 +533,7 @@
 <p>使用git reset –hard &lt;对应版本号&gt;回到过去！</p>
 <p>老板发话，说新版本出现问题了，要回退到hello,0x1023那个版本：</p>
 <p><img src="http://pic.077.ink/git%E6%97%B6%E5%85%89%E6%9C%BA%E5%9B%9E%E5%88%B0%E8%BF%87%E5%8E%BB%E7%89%88%E6%9C%AC%E5%8F%8A%E7%A1%AE%E8%AE%A4.png?x-oss-process=style/blog_20200322" alt=""></p>
-<h1 id="0x5-提交出错"><a href="#0x5-提交出错" class="headerlink" title="0x5 提交出错"></a>0x5 提交出错</h1><p><a href="https://blog.csdn.net/Ever69/article/details/97565768?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase" target="_blank" rel="noopener">failed to push some refs to错误解决方案</a></p>
+<h1 id="0x05-提交出错"><a href="#0x05-提交出错" class="headerlink" title="0x05 提交出错"></a>0x05 提交出错</h1><p><a href="https://blog.csdn.net/Ever69/article/details/97565768?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase" target="_blank" rel="noopener">failed to push some refs to错误解决方案</a></p>
 <blockquote>
 <p>回顾整个push过程</p>
 </blockquote>
@@ -693,7 +693,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0x0-什么是Git-amp-Github"><span class="nav-text">0x0 什么是Git&amp;Github</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SVN与Git的区别"><span class="nav-text">SVN与Git的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x1-Git基础概念"><span class="nav-text">0x1 Git基础概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x2-代码开发流程"><span class="nav-text">0x2 代码开发流程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x3-Git使用前"><span class="nav-text">0x3 Git使用前</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x4-开始玩Git"><span class="nav-text">0x4 开始玩Git</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载与安装"><span class="nav-text">下载与安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化"><span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第一次Git-Demo"><span class="nav-text">第一次Git Demo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第0步：新建txt"><span class="nav-text">第0步：新建txt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第1步：使用add添加到Index-Stage"><span class="nav-text">第1步：使用add添加到Index&#x2F;Stage</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第2步：使用commit提交到Repository（本地仓库）"><span class="nav-text">第2步：使用commit提交到Repository（本地仓库）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第3步：使用status检查是否有未提交的文件"><span class="nav-text">第3步：使用status检查是否有未提交的文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第4步：尝试修改test-txt文件再使用status检查一次"><span class="nav-text">第4步：尝试修改test.txt文件再使用status检查一次</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第5步：查看被修改的内容"><span class="nav-text">第5步：查看被修改的内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第6步：确认修改后，再次add、commit"><span class="nav-text">第6步：确认修改后，再次add、commit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第7步：版本回退"><span class="nav-text">第7步：版本回退</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第8步：时光机器"><span class="nav-text">第8步：时光机器</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x5-提交出错"><span class="nav-text">0x5 提交出错</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方案"><span class="nav-text">解决方案</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0x00-什么是Git-amp-Github"><span class="nav-text">0x00 什么是Git&amp;Github</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SVN与Git的区别"><span class="nav-text">SVN与Git的区别</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x01-Git基础概念"><span class="nav-text">0x01 Git基础概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x02-代码开发流程"><span class="nav-text">0x02 代码开发流程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x03-Git使用前"><span class="nav-text">0x03 Git使用前</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x04-开始玩Git"><span class="nav-text">0x04 开始玩Git</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载与安装"><span class="nav-text">下载与安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化"><span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第一次Git-Demo"><span class="nav-text">第一次Git Demo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第0步：新建txt"><span class="nav-text">第0步：新建txt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第1步：使用add添加到Index-Stage"><span class="nav-text">第1步：使用add添加到Index&#x2F;Stage</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第2步：使用commit提交到Repository（本地仓库）"><span class="nav-text">第2步：使用commit提交到Repository（本地仓库）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第3步：使用status检查是否有未提交的文件"><span class="nav-text">第3步：使用status检查是否有未提交的文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第4步：尝试修改test-txt文件再使用status检查一次"><span class="nav-text">第4步：尝试修改test.txt文件再使用status检查一次</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第5步：查看被修改的内容"><span class="nav-text">第5步：查看被修改的内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第6步：确认修改后，再次add、commit"><span class="nav-text">第6步：确认修改后，再次add、commit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第7步：版本回退"><span class="nav-text">第7步：版本回退</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第8步：时光机器"><span class="nav-text">第8步：时光机器</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x05-提交出错"><span class="nav-text">0x05 提交出错</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方案"><span class="nav-text">解决方案</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
