@@ -1213,7 +1213,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #7533ff;
+  background: #75ffbd;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2754,7 +2754,7 @@ ul.breadcrumb li + li:last-child {
   }
 }
 body {
-  background: url("/images/sea9.jpg");
+  background: url("/images/sea1.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
