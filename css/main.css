@@ -1213,7 +1213,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #e44541;
+  background: #f0d0ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2829,20 +2829,20 @@ ul.breadcrumb li + li:last-child {
   }
 }
 body {
-  background: url("/images/sea1.jpg");
+  background: url("/images/flower1.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: 50% 50%;
 }
 .content-wrap {
-  opacity: 0.95;
+  opacity: 0.93;
 }
 .sidebar {
-  opacity: 0.88;
+  opacity: 0.85;
 }
 .header-inner {
-  background: rgba(255,255,255,0.88);
+  background: rgba(255,255,255,0.9);
 }
 .popup {
   opacity: 0.88;
